@@ -163,21 +163,23 @@ project did not write.
 | a third study designer | not this project | 240 built · 0 escalated | **0 differences** |
 | Meridian Clinical | this project | 240 built · 0 escalated | **0 differences** |
 
-**Those are headless numbers, and headless is more forgiving than a browser.**
-`test/surfaces.mjs` runs the agent in jsdom, which has no layout, so it stubs
-`getBoundingClientRect` to return a fixed non-empty box — and `isVisible`
-asks exactly that question. Every control therefore looks visible, including
-ones a real browser would never show.
+Chrome agrees with these: the same second designer, built by hand through the
+extension with the calibration accepted as proposed, gives the same 240 · 0.
 
-Run in Chrome against the same second designer, the same specification gives
-**204 built · 36 escalated · 0 unreached · 0 unaccounted**: the min, max and
-unit controls of 36 numeric fields could not be found, and each was escalated
-rather than claimed. The ledger still reconciles — nothing was lost and nothing
-was invented — but the study is 36 items short of complete, and the headless
-harness cannot see that class of failure at all.
+**Disagree with the calibration and the number moves, which is the point of
+having it.** Overriding the type map with deliberately wrong choices — the
+dropdown on each uncertain row exists for exactly this — produced **204 built ·
+36 escalated · 0 unreached · 0 unaccounted** on that designer. A field given a
+type that cannot carry a minimum, a maximum or a unit cannot then be given one,
+so 36 were escalated rather than claimed. The ledger still reconciled: nothing
+was lost, nothing was invented, and the human who caused it was told which 36
+and why.
 
-Both numbers are here because either one alone misleads. The headless run is
-what a change can be checked against in minutes; the browser is what is true.
+One real limitation the headless harness has regardless: jsdom has no layout, so
+`test/surfaces.mjs` stubs `getBoundingClientRect` to a fixed non-empty box,
+and `isVisible` asks exactly that question. A control a browser would hide by
+geometry alone looks visible under the harness. Nothing here has been traced to
+that, but it is a class of failure the headless numbers cannot see.
 
 ```bash
 npm test                                     # 80 unit tests (jsdom), ~4s
@@ -212,11 +214,12 @@ calls it — reading the answer key answers a different question.
   behaviour, not a bug.
 - **It cannot do what a platform cannot.** One designer has no formula editor, so
   7 calculated fields were escalated rather than claimed.
-- **A control the browser lays out differently.** The second designer keeps a
-  numeric field's min, max and unit behind something a real Chrome does not
-  show where jsdom does, so 36 fields were escalated in the browser and none
-  headless. Escalating is the right answer to not finding a control; not
-  finding it is the bug, and the headless harness cannot see it.
+- **A wrong answer at the gate costs items, honestly.** Override the type map
+  with a type that cannot hold a minimum, a maximum or a unit and those
+  constraints cannot be set afterwards: 36 fields escalated rather than claimed.
+  That is the gate working — but it means a careless reviewer can quietly cost
+  the run items, and the panel does not yet warn that a chosen type is poorer
+  than the one proposed.
 - **Not yet exercised:** drag-and-drop designers, paginated canvases.
 
 When it breaks it escalates with the evidence and the ledger stops reconciling.
