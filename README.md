@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="180" height="180" alt="Tob the Trial Builder" src="src/icons/tob-256.png">
+<img width="180" height="180" alt="Tob the Trial Builder" src="tob_thebuilder.png">
 
 # Tob the Trial Builder
 
