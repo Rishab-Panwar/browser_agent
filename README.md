@@ -1,4 +1,4 @@
-# Study Builder Agent
+# Tob the Trial Builder
 
 A Chrome extension that reads a study specification and builds it into whatever
 eSource form designer is open in the tab, with no prior knowledge of that

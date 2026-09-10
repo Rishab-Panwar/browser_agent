@@ -27,5 +27,7 @@ await build({
 for (const file of ['manifest.json', 'panel.html', 'panel.css']) {
   await cp(`src/${file}`, `${outdir}/${file}`);
 }
+// The icons the manifest names, and the one the panel shows in its masthead.
+await cp('src/icons', `${outdir}/icons`, { recursive: true });
 
 console.log(`built -> ${outdir}/`);

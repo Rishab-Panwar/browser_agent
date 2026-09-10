@@ -1,62 +1,298 @@
-:root { color-scheme: dark; --bg:#12151b; --fg:#e6e9ef; --dim:#9aa4b2; --line:#242a35;
-        --good:#3fb950; --warn:#d29922; --bad:#f85149; --accent:#2f81f7; }
+/*
+ * panel.css — the side panel.
+ *
+ * Presentation only. Every hook the panel script uses is unchanged: the ids
+ * (file, spec, run, stop, export, status, question, ledger, trace) and the
+ * class names it writes (line + kind, card, path, evidence, uncertain,
+ * correction, changed, count + tone, open). Nothing here decides anything.
+ *
+ * The restraint that matters in a tool like this: a panel reporting on a
+ * clinical study build should look considered, not lively. No gradients that
+ * move, no progress bar that advances on its own, no colour that says "alarm"
+ * for a number that is simply not zero. Weight, spacing and one accent do the
+ * work; the numbers stay the loudest thing on the screen.
+ */
+
+:root {
+  color-scheme: dark;
+  --bg: #0d1017;
+  --raised: #141922;
+  --raised-2: #1a2029;
+  --fg: #e8ecf3;
+  --dim: #93a0b4;
+  --faint: #6b7889;
+  --line: #222a36;
+  --line-soft: #1b222c;
+  --good: #4ade80;
+  --warn: #fbbf24;
+  --bad: #f87171;
+  --accent: #5eb0ff;
+  --accent-deep: #1d4ed8;
+  --radius: 12px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .28);
+}
+
 * { box-sizing: border-box; }
-body { margin:0; padding:14px; background:var(--bg); color:var(--fg);
-       font:13px/1.5 system-ui, -apple-system, Segoe UI, sans-serif; }
-h1 { font-size:15px; margin:0 0 4px; }
-h2 { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim);
-     margin:18px 0 8px; }
-h3 { font-size:13px; margin:0 0 6px; }
-.sub { color:var(--dim); margin:0 0 14px; }
-section { border-top:1px solid var(--line); padding-top:12px; }
-section:first-of-type { border-top:0; padding-top:0; }
-.file { display:block; margin-bottom:8px; color:var(--dim); }
-.file input { display:block; margin-top:4px; color:var(--fg); }
-.spec { color:var(--dim); margin:0 0 10px; }
-.row { display:flex; gap:8px; flex-wrap:wrap; }
-button { background:#1f2530; color:var(--fg); border:1px solid var(--line); border-radius:6px;
-         padding:6px 12px; font:inherit; cursor:pointer; }
-button:hover:not(:disabled) { border-color:var(--accent); }
-button:disabled { opacity:.45; cursor:default; }
-.status { color:var(--dim); margin:10px 0 0; }
 
-.card { border:1px solid var(--warn); border-radius:8px; padding:12px; background:#1b1a12; }
-.path { color:var(--dim); font-family:ui-monospace, monospace; font-size:11px; margin:0 0 8px; }
-.evidence { margin:0 0 10px; padding-left:18px; color:var(--dim); }
-.evidence li { margin:2px 0; }
-.evidence li.uncertain { color:var(--warn); }
-.card button { margin-right:6px; margin-top:4px; }
+body {
+  margin: 0;
+  padding: 16px 14px 28px;
+  background:
+    radial-gradient(1100px 380px at 50% -180px, #17202e 0%, transparent 70%),
+    var(--bg);
+  color: var(--fg);
+  font: 13px/1.55 "Segoe UI", -apple-system, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
 
-.ledger { display:flex; gap:8px; flex-wrap:wrap; }
-.count { flex:1 1 84px; border:1px solid var(--line); border-radius:8px; padding:8px; }
-.count b { display:block; font-size:18px; }
-.count span { color:var(--dim); font-size:11px; }
-.count.good b { color:var(--good); }
-.count.warn b { color:var(--warn); }
-.count.bad  b { color:var(--bad); }
-.open { width:100%; margin:10px 0 0; padding-left:18px; color:var(--dim); }
-.open li { margin:3px 0; }
+/* ── masthead ─────────────────────────────────────────────────────────── */
 
-.trace { max-height:260px; overflow:auto; font-family:ui-monospace, monospace; font-size:11px; }
-.line { padding:2px 0; border-bottom:1px solid #1b202a; color:var(--dim); }
-.line.built, .line.verify { color:var(--good); }
-.line.ask, .line.stop { color:var(--warn); }
-.line.error { color:var(--bad); }
+.masthead {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 16px;
+}
+
+.masthead .mark {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: var(--raised-2);
+  box-shadow: 0 0 0 1px var(--line), 0 4px 12px rgba(0, 0, 0, .35);
+}
+
+.masthead .titles { min-width: 0; }
+
+h1 {
+  font-size: 16px;
+  font-weight: 640;
+  letter-spacing: -.01em;
+  margin: 1px 0 3px;
+}
+
+/* The name carries; the description of it need not shout alongside. */
+h1 .rest { color: var(--dim); font-weight: 500; }
+
+.sub {
+  color: var(--dim);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── sections ─────────────────────────────────────────────────────────── */
+
+section { margin-top: 14px; }
+section:empty { display: none; margin: 0; }
+
+.panel {
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--faint);
+  font-weight: 650;
+  margin: 0 0 10px;
+}
+
+h3 { font-size: 13px; font-weight: 620; margin: 0 0 6px; }
+
+/* ── choosing a specification ─────────────────────────────────────────── */
+
+.file { display: block; cursor: pointer; }
+.file .filelabel {
+  display: block;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--faint);
+  font-weight: 650;
+  margin-bottom: 7px;
+}
+
+/* The control the browser draws for a file input cannot be styled, so it is
+   hidden and this stands in for it — the label still triggers it, so the
+   behaviour is the browser's own. */
+.file .pick {
+  display: block;
+  border: 1px dashed #2c3746;
+  border-radius: 9px;
+  padding: 11px 12px;
+  color: var(--dim);
+  background: #10151d;
+  transition: border-color .15s, color .15s, background .15s;
+}
+.file:hover .pick { border-color: var(--accent); color: var(--fg); background: #121a25; }
+.file input { position: absolute; width: 0; height: 0; opacity: 0; }
+
+.spec {
+  color: var(--dim);
+  font-size: 12px;
+  margin: 9px 0 12px;
+}
+
+/* ── buttons ──────────────────────────────────────────────────────────── */
+
+.row { display: flex; gap: 7px; flex-wrap: wrap; }
+
+button {
+  background: var(--raised-2);
+  color: var(--fg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 13px;
+  font: inherit;
+  font-weight: 550;
+  cursor: pointer;
+  transition: border-color .15s, background .15s, transform .06s;
+}
+button:hover:not(:disabled) { border-color: #33415a; background: #1f2733; }
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled { opacity: .38; cursor: default; }
+
+button.primary {
+  background: linear-gradient(180deg, #2563eb, #1d4ed8);
+  border-color: #2f6fe0;
+  color: #fff;
+}
+button.primary:hover:not(:disabled) { background: linear-gradient(180deg, #3b7bf5, #2258d8); border-color: #4a86ea; }
+button.primary:disabled { background: var(--raised-2); border-color: var(--line); color: var(--fg); }
+
+.status {
+  color: var(--dim);
+  font-size: 12px;
+  margin: 12px 0 0;
+  padding-top: 11px;
+  border-top: 1px solid var(--line-soft);
+}
+
+/* ── a question, and what can be done about it ────────────────────────── */
+
+.card {
+  border: 1px solid #3a3320;
+  border-left: 3px solid var(--warn);
+  border-radius: var(--radius);
+  padding: 14px;
+  background: linear-gradient(180deg, #1d1a12, #171712);
+  box-shadow: var(--shadow);
+}
+.path {
+  color: var(--faint);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  margin: 0 0 9px;
+}
+.evidence { margin: 0 0 12px; padding-left: 16px; color: var(--dim); font-size: 12px; }
+.evidence li { margin: 3px 0; }
+.evidence li.uncertain { color: var(--warn); }
+.card button { margin: 6px 6px 0 0; }
 
 /* A mapping the reviewer may change, rather than accept or abandon wholesale. */
 .correction {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin: 6px 0;
+  gap: 9px;
+  margin: 7px 0;
+  padding: 7px 9px;
   font-size: 12px;
+  background: #16150f;
+  border: 1px solid #2a2718;
+  border-radius: 8px;
 }
-.correction span { flex: 0 0 auto; opacity: 0.8; }
+.correction span { flex: 0 0 auto; color: var(--dim); }
 .correction select {
   flex: 1 1 auto;
   min-width: 0;
-  padding: 3px 4px;
+  padding: 5px 7px;
   font: inherit;
+  color: var(--fg);
+  background: #10151d;
+  border: 1px solid var(--line);
+  border-radius: 6px;
 }
-.correction.changed span { opacity: 1; font-weight: 600; }
-.correction.changed select { outline: 2px solid currentColor; }
+.correction select:focus { outline: none; border-color: var(--accent); }
+/* Changed by hand: said plainly, because it is the reviewer's decision and the
+   run will carry it out. */
+.correction.changed { border-color: var(--warn); background: #1d1a10; }
+.correction.changed span { color: var(--warn); font-weight: 640; }
+.correction.changed select { border-color: var(--warn); }
+
+/* ── the ledger ───────────────────────────────────────────────────────── */
+
+.ledger { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.count {
+  flex: 1 1 78px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 11px;
+  background: linear-gradient(180deg, #171d27, #131820);
+}
+.count b {
+  display: block;
+  font-size: 21px;
+  font-weight: 660;
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.15;
+}
+.count span {
+  display: block;
+  color: var(--faint);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-top: 3px;
+}
+.count.good b { color: var(--good); }
+.count.warn b { color: var(--warn); }
+.count.bad b { color: var(--bad); }
+/* Zero is the resting state of every one of these, so it is not coloured like
+   a result. A reader should notice the number that is not zero. */
+.count.warn b, .count.bad b { opacity: 1; }
+
+.open {
+  width: 100%;
+  margin: 12px 0 0;
+  padding: 11px 0 0 17px;
+  border-top: 1px solid var(--line-soft);
+  color: var(--dim);
+  font-size: 12px;
+}
+.open li { margin: 4px 0; }
+
+/* ── what it did ──────────────────────────────────────────────────────── */
+
+.trace {
+  max-height: 280px;
+  overflow: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  border-radius: 8px;
+}
+.line {
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--dim);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.line:last-child { border-bottom: 0; }
+.line.built, .line.verify { color: var(--good); }
+.line.ask, .line.stop { color: var(--warn); }
+.line.error { color: var(--bad); }
+
+.trace::-webkit-scrollbar { width: 9px; }
+.trace::-webkit-scrollbar-thumb { background: #232b37; border-radius: 6px; }
+.trace::-webkit-scrollbar-thumb:hover { background: #2d3746; }
+.trace::-webkit-scrollbar-track { background: transparent; }

@@ -1,18 +1,25 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Study Builder Agent</title>
+<title>Tob the Trial Builder</title>
 <link rel="stylesheet" href="panel.css">
 <body>
-  <h1>Study Builder Agent</h1>
-  <p class="sub">Reads a study specification and builds it into whatever eSource is in this tab. Anything it cannot settle honestly becomes a question.</p>
+  <header class="masthead">
+    <img class="mark" src="icons/tob-256.png" alt="">
+    <div class="titles">
+      <h1>Tob<span class="rest"> the Trial Builder</span></h1>
+      <p class="sub">Reads a study specification and builds it into whatever eSource is in this tab. Anything it cannot settle honestly becomes a question.</p>
+    </div>
+  </header>
 
-  <section>
-    <label class="file">Specification
+  <section class="panel">
+    <label class="file" for="file">
+      <span class="filelabel">Specification</span>
+      <span class="pick">Choose a .json file</span>
       <input type="file" id="file" accept="application/json,.json">
     </label>
     <p id="spec" class="spec">No specification loaded.</p>
     <div class="row">
-      <button id="run" disabled>Build into this tab</button>
+      <button id="run" class="primary" disabled>Build into this tab</button>
       <button id="stop" disabled>Stop</button>
       <button id="export" disabled>Export run</button>
     </div>
@@ -21,12 +28,12 @@
 
   <section id="question"></section>
 
-  <section>
+  <section class="panel">
     <h2>Ledger</h2>
     <div id="ledger" class="ledger"></div>
   </section>
 
-  <section>
+  <section class="panel">
     <h2>What it did</h2>
     <div id="trace" class="trace"></div>
   </section>

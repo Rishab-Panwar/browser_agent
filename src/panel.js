@@ -25,6 +25,11 @@ const trace = [];
 $('file').addEventListener('change', async (event) => {
   const file = event.target.files[0];
   if (!file) return;
+  // The browser's own file control is hidden so the panel can style the label,
+  // which means the chosen name has to be shown here — a picker that still
+  // reads "choose a file" after you chose one is the panel lying about state.
+  const pick = document.querySelector('.file .pick');
+  if (pick) pick.textContent = file.name;
   try {
     ir = JSON.parse(await file.text());
     const forms = ir.visits.reduce((n, v) => n + v.forms.length, 0);
