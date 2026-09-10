@@ -2,3 +2,11 @@ node_modules
 # Build output. `npm run build` regenerates it in well under a second, and a
 # committed bundle drifts from the source it claims to be.
 dist
+
+# Run output and traces. Every one of these contains the study specification in
+# full — the 195 field names, the visits, the skip logic — which is the
+# assignment's material and the reason abc-101-study.ir.json is not here either.
+# They also carry the other designers' own vocabulary for their controls.
+# `node test/surfaces.mjs` regenerates them locally in seconds.
+runs
+traces

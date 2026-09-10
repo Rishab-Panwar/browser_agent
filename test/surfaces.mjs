@@ -17,7 +17,7 @@
  * against the input file by verify-build.mjs. The agent never reads that state.
  */
 import { JSDOM } from 'jsdom';
-import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { run } from '../src/orchestrate.js';
@@ -84,6 +84,9 @@ async function build(surface) {
   });
   const seconds = ((Date.now() - started) / 1000).toFixed(0);
 
+  // runs/ is not in the repository (it holds the specification in full), so a
+  // fresh clone has to create it.
+  mkdirSync(`${HERE}../runs`, { recursive: true });
   const out = `${HERE}../runs/state-${surface.name}-headless.json`;
   const state = win.__readState ? win.__readState() : null;
   if (state) writeFileSync(out, JSON.stringify(typeof state === 'string' ? JSON.parse(state) : state, null, 2));

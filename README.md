@@ -33,7 +33,7 @@ npm run mock                      # a designer to build into, on :5174
 Chrome → `chrome://extensions` → Developer mode → **Load unpacked** → `dist/`.
 Open a designer in a tab, click the Tob icon, choose `abc-101-study.ir.json`, then **Build into this tab**. The agent is injected at run time, so a tab opened before installing does not need reloading.
 
-> **Not in this repository.** The study specification and the assignment's own mock are the assignment's material, so neither is published here. Everything still runs: tests needing the spec skip and say so, and `mocks/meridian/` is a complete designer written for this project that ships.
+> **Not in this repository.** The study specification and the assignment's own mock are the assignment's material, so neither is published here, and neither are the run outputs and traces, since every one of those contains that specification in full. Everything still runs: tests needing the spec skip and say so, `test/surfaces.mjs` regenerates the runs locally, and `mocks/meridian/` is a complete designer written for this project that ships.
 
 ---
 
@@ -230,7 +230,7 @@ Claude (via Claude Code) was used throughout, for the agent, the mock, the tests
 
 It helped most at turning failures into root causes. Reproducing a failing surface in jsdom and instrumenting it beat re-running the browser and guessing, and `test/surfaces.mjs` came out of that.
 
-It got in the way by being **confidently wrong at the moments that matter**. It called a fix verified when only one direction had been tested, proposed two wrong causes for a stall before instrumentation found the real one, and once made a change that fixed one platform while silently breaking another from 240/240 to 11/240, caught only by running all four. The discipline that came out of it is the one the agent itself uses: **do not believe a claim you have not verified, and say who verified it.** Every number here comes from a run in `traces/` or is reproducible with `test/surfaces.mjs`.
+It got in the way by being **confidently wrong at the moments that matter**. It called a fix verified when only one direction had been tested, proposed two wrong causes for a stall before instrumentation found the real one, and once made a change that fixed one platform while silently breaking another from 240/240 to 11/240, caught only by running all four. The discipline that came out of it is the one the agent itself uses: **do not believe a claim you have not verified, and say who verified it.** Every number here is reproducible with `test/surfaces.mjs`, which is the only claim worth making about a number.
 
 ---
 
