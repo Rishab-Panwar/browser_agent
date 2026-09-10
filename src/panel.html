@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Study Builder Agent</title>
+<link rel="stylesheet" href="panel.css">
+<body>
+  <h1>Study Builder Agent</h1>
+  <p class="sub">Reads a study specification and builds it into whatever eSource is in this tab. Anything it cannot settle honestly becomes a question.</p>
+
+  <section>
+    <label class="file">Specification
+      <input type="file" id="file" accept="application/json,.json">
+    </label>
+    <p id="spec" class="spec">No specification loaded.</p>
+    <div class="row">
+      <button id="run" disabled>Build into this tab</button>
+      <button id="stop" disabled>Stop</button>
+      <button id="export" disabled>Export run</button>
+    </div>
+    <p id="status" class="status">idle</p>
+  </section>
+
+  <section id="question"></section>
+
+  <section>
+    <h2>Ledger</h2>
+    <div id="ledger" class="ledger"></div>
+  </section>
+
+  <section>
+    <h2>What it did</h2>
+    <div id="trace" class="trace"></div>
+  </section>
+
+  <script type="module" src="panel.js"></script>
+</body>

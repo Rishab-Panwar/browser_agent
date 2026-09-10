@@ -1,0 +1,62 @@
+:root { color-scheme: dark; --bg:#12151b; --fg:#e6e9ef; --dim:#9aa4b2; --line:#242a35;
+        --good:#3fb950; --warn:#d29922; --bad:#f85149; --accent:#2f81f7; }
+* { box-sizing: border-box; }
+body { margin:0; padding:14px; background:var(--bg); color:var(--fg);
+       font:13px/1.5 system-ui, -apple-system, Segoe UI, sans-serif; }
+h1 { font-size:15px; margin:0 0 4px; }
+h2 { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim);
+     margin:18px 0 8px; }
+h3 { font-size:13px; margin:0 0 6px; }
+.sub { color:var(--dim); margin:0 0 14px; }
+section { border-top:1px solid var(--line); padding-top:12px; }
+section:first-of-type { border-top:0; padding-top:0; }
+.file { display:block; margin-bottom:8px; color:var(--dim); }
+.file input { display:block; margin-top:4px; color:var(--fg); }
+.spec { color:var(--dim); margin:0 0 10px; }
+.row { display:flex; gap:8px; flex-wrap:wrap; }
+button { background:#1f2530; color:var(--fg); border:1px solid var(--line); border-radius:6px;
+         padding:6px 12px; font:inherit; cursor:pointer; }
+button:hover:not(:disabled) { border-color:var(--accent); }
+button:disabled { opacity:.45; cursor:default; }
+.status { color:var(--dim); margin:10px 0 0; }
+
+.card { border:1px solid var(--warn); border-radius:8px; padding:12px; background:#1b1a12; }
+.path { color:var(--dim); font-family:ui-monospace, monospace; font-size:11px; margin:0 0 8px; }
+.evidence { margin:0 0 10px; padding-left:18px; color:var(--dim); }
+.evidence li { margin:2px 0; }
+.evidence li.uncertain { color:var(--warn); }
+.card button { margin-right:6px; margin-top:4px; }
+
+.ledger { display:flex; gap:8px; flex-wrap:wrap; }
+.count { flex:1 1 84px; border:1px solid var(--line); border-radius:8px; padding:8px; }
+.count b { display:block; font-size:18px; }
+.count span { color:var(--dim); font-size:11px; }
+.count.good b { color:var(--good); }
+.count.warn b { color:var(--warn); }
+.count.bad  b { color:var(--bad); }
+.open { width:100%; margin:10px 0 0; padding-left:18px; color:var(--dim); }
+.open li { margin:3px 0; }
+
+.trace { max-height:260px; overflow:auto; font-family:ui-monospace, monospace; font-size:11px; }
+.line { padding:2px 0; border-bottom:1px solid #1b202a; color:var(--dim); }
+.line.built, .line.verify { color:var(--good); }
+.line.ask, .line.stop { color:var(--warn); }
+.line.error { color:var(--bad); }
+
+/* A mapping the reviewer may change, rather than accept or abandon wholesale. */
+.correction {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  font-size: 12px;
+}
+.correction span { flex: 0 0 auto; opacity: 0.8; }
+.correction select {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 3px 4px;
+  font: inherit;
+}
+.correction.changed span { opacity: 1; font-weight: 600; }
+.correction.changed select { outline: 2px solid currentColor; }

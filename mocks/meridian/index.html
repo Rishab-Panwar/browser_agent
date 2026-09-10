@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian Clinical — Study Configuration</title>
+<style>
+  :root { --line: #d8dce3; --ink: #1c2530; --dim: #667085; --accent: #0b6b5e; --warn: #a8410a; --bg: #f4f6f8; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.45 "Segoe UI", system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+  header { background: #16222e; color: #fff; padding: 10px 18px; display: flex; align-items: center; gap: 18px; }
+  header .brand { font-weight: 600; letter-spacing: .2px; }
+  header .protocol { font-size: 12px; opacity: .75; }
+  .shell { display: flex; min-height: calc(100vh - 44px); }
+  .sidebar { width: 250px; flex: 0 0 250px; background: #fff; border-right: 1px solid var(--line); padding: 12px 0; }
+  .sidebar h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); margin: 4px 16px 8px; }
+  .tree { list-style: none; margin: 0; padding: 0; }
+  .tree li { padding: 0; }
+  .node { display: block; width: 100%; text-align: left; background: none; border: 0; font: inherit; color: inherit;
+          padding: 5px 16px; cursor: pointer; }
+  .node:hover { background: #eef4f3; }
+  .node.on { background: #e2efec; font-weight: 600; }
+  .node.form { padding-left: 32px; font-size: 13px; }
+  .main { flex: 1 1 auto; padding: 18px 22px; min-width: 0; }
+  h1 { font-size: 19px; margin: 0 0 2px; }
+  .sub { color: var(--dim); font-size: 12px; margin: 0 0 16px; }
+  .btn { font: inherit; padding: 5px 11px; border: 1px solid var(--line); background: #fff; border-radius: 3px; cursor: pointer; }
+  .btn.main { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn.quiet { background: none; border-color: transparent; color: var(--accent); }
+  .btn.danger { border-color: #d9b0a4; color: var(--warn); }
+  .bar { display: flex; gap: 8px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
+  .bar .spacer { flex: 1 1 auto; }
+  table { border-collapse: collapse; width: 100%; background: #fff; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); }
+  .panes { display: grid; grid-template-columns: 260px 1fr 300px; gap: 14px; align-items: start; }
+  .pane { background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 12px; }
+  .pane h3 { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); margin: 0 0 10px; }
+  .catalogue { list-style: none; margin: 0; padding: 0; max-height: 460px; overflow-y: auto; }
+  .catalogue li[role="option"] { padding: 6px 8px; border: 1px solid var(--line); border-radius: 3px; margin-bottom: 5px; cursor: pointer; }
+  .catalogue li[role="option"]:hover { border-color: var(--accent); background: #f2f8f7; }
+  .slot { border: 1px solid var(--line); border-radius: 3px; padding: 9px 10px; margin-bottom: 8px; cursor: pointer; }
+  .slot.on { border-color: var(--accent); box-shadow: 0 0 0 2px #d9ebe8; }
+  .slot .top { display: flex; justify-content: space-between; gap: 10px; }
+  .slot .who { font-weight: 600; font-size: 13px; }
+  .slot .what { font-size: 11px; color: var(--dim); }
+  .row { margin-bottom: 9px; }
+  .row > label { display: block; font-size: 11px; color: var(--dim); margin-bottom: 2px; }
+  .row input[type=text], .row select, .row textarea { width: 100%; font: inherit; padding: 4px 6px; border: 1px solid var(--line); border-radius: 3px; }
+  .switchrow { display: flex; align-items: center; gap: 8px; margin-bottom: 9px; }
+  [role="switch"] { width: 34px; height: 18px; border-radius: 9px; border: 1px solid var(--line); background: #e6e9ee; cursor: pointer; position: relative; }
+  [role="switch"][aria-checked="true"] { background: var(--accent); border-color: var(--accent); }
+  [role="switch"]::after { content: ""; position: absolute; top: 1px; left: 1px; width: 14px; height: 14px; border-radius: 50%; background: #fff; }
+  [role="switch"][aria-checked="true"]::after { left: 17px; }
+  fieldset { border: 1px solid var(--line); border-radius: 3px; margin: 0 0 10px; padding: 8px 10px; }
+  legend { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); padding: 0 4px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr auto; gap: 5px; margin-bottom: 5px; }
+  .menu { position: relative; display: inline-block; }
+  .menu .items { position: absolute; right: 0; top: 100%; background: #fff; border: 1px solid var(--line); border-radius: 3px;
+                 box-shadow: 0 6px 18px rgba(20,30,40,.14); min-width: 210px; z-index: 5; }
+  .menu .items [role="menuitem"] { padding: 7px 11px; cursor: pointer; font-size: 13px; }
+  .menu .items [role="menuitem"]:hover { background: #eef4f3; }
+  .notice { background: #fff8e6; border: 1px solid #e8d9a8; padding: 7px 10px; border-radius: 3px; margin-bottom: 12px; font-size: 13px; }
+  .empty { color: var(--dim); font-size: 13px; }
+  dialog::backdrop { background: rgba(20,28,36,.45); }
+  dialog { border: 1px solid var(--line); border-radius: 4px; padding: 16px 18px; width: 420px; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+/*
+ * Meridian Clinical — a fourth eSource surface, written for this project.
+ *
+ * WHY THIS EXISTS
+ * The assignment ships one mock, and an agent tuned against one mock is only
+ * ever proved against one mock. The surfaces it was developed against are not
+ * ours to publish — so this one was written from scratch, and it can live in
+ * the repository as a benchmark anybody can run.
+ *
+ * It is deliberately NOT a re-skin. Everything an agent might key on is
+ * different from the surface it was first written against:
+ *
+ *   - navigation is a sidebar TREE, not tabs, a table of documents, or cards
+ *   - the element catalogue is a listbox of role=option items, not buttons
+ *   - "required" is a role=switch with aria-checked, not a checkbox
+ *   - "repeating" is a pair of radios, not a checkbox
+ *   - saving is called "Apply Changes" and sits in an overflow menu, beside
+ *     "Export Definition" and "Save to Library", which persist nothing
+ *   - coded values are a two-column grid added a row at a time
+ *   - skip logic is "Visibility Rule", with a mode called "Only when"
+ *
+ * None of that is trickery for its own sake: every one of these shapes exists
+ * in some real EDC. The point is that an agent should read what a control IS,
+ * not what this particular platform happens to call it.
+ *
+ * __readState() is for human verification only, exactly as the assignment's
+ * own mock provides. An agent that reads it is answering a different question
+ * than the one being asked.
+ */
+
+// ── state ────────────────────────────────────────────────────────────────────
+
+const state = {
+  study: { name: 'Untitled Study', visits: [] },
+  route: { kind: 'study' },
+  ui: { selectedSlotId: null, working: null, menuOpen: false, notice: '', dialog: null, dirty: false },
+};
+
+let counter = 0;
+const nid = (p) => `${p}${++counter}`;
+const clone = (v) => JSON.parse(JSON.stringify(v));
+
+const KINDS = [
+  { key: 'line', label: 'Line Entry', canonical: 'text' },
+  { key: 'para', label: 'Paragraph Entry', canonical: 'textarea' },
+  { key: 'count', label: 'Whole Amount', canonical: 'integer' },
+  { key: 'exact', label: 'Exact Amount', canonical: 'decimal' },
+  { key: 'onedate', label: 'Date Entry', canonical: 'date' },
+  { key: 'clock', label: 'Time Entry', canonical: 'time' },
+  { key: 'stamp', label: 'Date and Time Entry', canonical: 'datetime' },
+  { key: 'truth', label: 'Yes or No Answer', canonical: 'boolean' },
+  { key: 'onefrom', label: 'Choose One From List', canonical: 'single_select' },
+  { key: 'manyfrom', label: 'Choose Any From List', canonical: 'multi_select' },
+  { key: 'onefromvisible', label: 'Choose One, Shown Inline', canonical: 'radio' },
+  { key: 'mark', label: 'Confirmation Mark', canonical: 'checkbox' },
+  { key: 'workedout', label: 'Worked Out Automatically', canonical: 'calculated' },
+];
+const kindOf = (key) => KINDS.find((k) => k.key === key) || KINDS[0];
+const kindByCanonical = (c) => KINDS.find((k) => k.canonical === c) || KINDS[0];
+const hasRange = (key) => ['count', 'exact'].includes(key);
+const hasChoices = (key) => ['onefrom', 'manyfrom', 'onefromvisible'].includes(key);
+
+// ── tiny DOM helpers ─────────────────────────────────────────────────────────
+
+function h(tag, attrs = {}, kids = []) {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v === undefined || v === null || v === false) continue;
+    node.setAttribute(k, v === true ? '' : String(v));
+  }
+  for (const kid of [].concat(kids)) node.append(kid && kid.nodeType ? kid : document.createTextNode(String(kid)));
+  return node;
+}
+const btn = (label, cls = 'btn', onclick) => {
+  const b = h('button', { type: 'button', class: cls }, [label]);
+  if (onclick) b.addEventListener('click', onclick);
+  return b;
+};
+const field = (labelText, control) => h('div', { class: 'row' }, [h('label', { for: control.id }, [labelText]), control]);
+const input = (value = '', oninput) => {
+  const el = h('input', { type: 'text', id: nid('c') });
+  el.value = value;
+  if (oninput) el.addEventListener('input', () => oninput(el.value));
+  return el;
+};
+
+function notice(text) { state.ui.notice = text; render(); }
+
+// ── screens ──────────────────────────────────────────────────────────────────
+
+function render() {
+  const app = document.getElementById('app');
+  app.replaceChildren(
+    h('header', {}, [
+      h('span', { class: 'brand' }, ['Meridian Clinical']),
+      h('span', { class: 'protocol' }, ['Study Configuration']),
+    ]),
+    h('div', { class: 'shell' }, [sidebar(), h('main', { class: 'main' }, screen())]),
+  );
+  if (state.ui.dialog) app.append(dialog());
+}
+
+function sidebar() {
+  const side = h('aside', { class: 'sidebar' }, [h('h2', {}, ['Study Structure'])]);
+  const tree = h('ul', { class: 'tree' });
+
+  const root = btn(state.study.name, `node${state.route.kind === 'study' ? ' on' : ''}`, () => go({ kind: 'study' }));
+  tree.append(h('li', {}, [root]));
+
+  for (const visit of state.study.visits) {
+    const on = state.route.visitId === visit.id && state.route.kind !== 'design';
+    tree.append(h('li', {}, [btn(visit.name, `node${on ? ' on' : ''}`, () => go({ kind: 'visit', visitId: visit.id }))]));
+    for (const form of visit.forms) {
+      const selected = state.route.kind === 'design' && state.route.formId === form.id;
+      tree.append(h('li', {}, [btn(form.name, `node form${selected ? ' on' : ''}`,
+        () => openDesign(visit.id, form.id))]));
+    }
+  }
+  side.append(tree);
+  return side;
+}
+
+function screen() {
+  if (state.route.kind === 'study') return studyScreen();
+  if (state.route.kind === 'visit') return visitScreen();
+  if (state.route.kind === 'design') return designScreen();
+  return [h('p', {}, ['Nothing here.'])];
+}
+
+function go(route) {
+  state.route = route;
+  state.ui.menuOpen = false;
+  state.ui.notice = '';
+  render();
+}
+
+// ── study: the visits ────────────────────────────────────────────────────────
+
+function studyScreen() {
+  const kids = [
+    h('h1', {}, ['Study Schedule']),
+    h('p', { class: 'sub' }, ['Every visit in the protocol, with the days its window opens and closes.']),
+  ];
+  if (state.ui.notice) kids.push(h('div', { class: 'notice', role: 'status' }, [state.ui.notice]));
+
+  const table = h('table', {}, [h('thead', {}, [h('tr', {}, [
+    h('th', {}, ['Visit']), h('th', {}, ['Window Opens']), h('th', {}, ['Window Closes']),
+    h('th', {}, ['Forms']), h('th', {}, ['']),
+  ])])]);
+  const body = h('tbody');
+  for (const visit of state.study.visits) {
+    body.append(h('tr', {}, [
+      h('td', {}, [visit.name]),
+      h('td', {}, [`Day ${visit.windowStart}`]),
+      h('td', {}, [`Day ${visit.windowEnd}`]),
+      h('td', {}, [String(visit.forms.length)]),
+      h('td', {}, [btn('Open', 'btn quiet', () => go({ kind: 'visit', visitId: visit.id }))]),
+    ]));
+  }
+  if (!state.study.visits.length) body.append(h('tr', {}, [h('td', { colspan: '5', class: 'empty' }, ['No visits yet.'])]));
+  table.append(body);
+
+  kids.push(table, h('div', { class: 'bar', style: 'margin-top:14px' }, [
+    btn('Add Visit', 'btn main', () => { state.ui.dialog = { kind: 'visit', draft: { name: '', start: '', end: '' } }; render(); }),
+  ]));
+  return kids;
+}
+
+// ── visit: the forms ─────────────────────────────────────────────────────────
+
+function visitScreen() {
+  const visit = state.study.visits.find((v) => v.id === state.route.visitId);
+  if (!visit) return [h('p', {}, ['That visit is gone.'])];
+
+  const kids = [
+    h('div', { class: 'bar' }, [btn('Back to Study Schedule', 'btn quiet', () => go({ kind: 'study' }))]),
+    h('h1', {}, [`${visit.name} — Forms`]),
+    h('p', { class: 'sub' }, [`Window: day ${visit.windowStart} through day ${visit.windowEnd}`]),
+  ];
+  if (state.ui.notice) kids.push(h('div', { class: 'notice', role: 'status' }, [state.ui.notice]));
+
+  const table = h('table', {}, [h('thead', {}, [h('tr', {}, [
+    h('th', {}, ['Form']), h('th', {}, ['Entries']), h('th', {}, ['State']), h('th', {}, ['Items']), h('th', {}, ['']),
+  ])])]);
+  const body = h('tbody');
+  for (const form of visit.forms) {
+    body.append(h('tr', {}, [
+      h('td', {}, [form.name]),
+      h('td', {}, [form.repeating ? 'Multiple per visit' : 'One per visit']),
+      h('td', {}, [form.state]),
+      h('td', {}, [String(form.slots.length)]),
+      h('td', {}, [btn('Configure', 'btn quiet', () => openDesign(visit.id, form.id))]),
+    ]));
+  }
+  if (!visit.forms.length) body.append(h('tr', {}, [h('td', { colspan: '5', class: 'empty' }, ['No forms on this visit yet.'])]));
+  table.append(body);
+
+  kids.push(table, h('div', { class: 'bar', style: 'margin-top:14px' }, [
+    btn('Add Form', 'btn main', () => { state.ui.dialog = { kind: 'form', draft: { name: '', repeating: false } }; render(); }),
+  ]));
+  return kids;
+}
+
+// ── the designer ─────────────────────────────────────────────────────────────
+
+function openDesign(visitId, formId) {
+  const visit = state.study.visits.find((v) => v.id === visitId);
+  const form = visit && visit.forms.find((f) => f.id === formId);
+  if (!form) return;
+  state.route = { kind: 'design', visitId, formId };
+  state.ui.working = clone(form);
+  state.ui.selectedSlotId = null;
+  state.ui.menuOpen = false;
+  state.ui.notice = '';
+  state.ui.dirty = false;
+  render();
+}
+
+function applyChanges() {
+  const visit = state.study.visits.find((v) => v.id === state.route.visitId);
+  if (!visit || !state.ui.working) return;
+  visit.forms = visit.forms.map((f) => (f.id === state.ui.working.id ? clone(state.ui.working) : f));
+  state.ui.dirty = false;
+  state.ui.menuOpen = false;
+  notice('Changes applied to the study.');
+}
+
+function designScreen() {
+  const visit = state.study.visits.find((v) => v.id === state.route.visitId);
+  const working = state.ui.working;
+  if (!visit || !working) return [h('p', {}, ['Nothing open.'])];
+
+  const kids = [
+    h('div', { class: 'bar' }, [
+      btn(`Back to ${visit.name}`, 'btn quiet', () => go({ kind: 'visit', visitId: visit.id })),
+      h('span', { class: 'spacer' }),
+      // Sits where a save usually sits. Opens a read-only view and keeps nothing.
+      btn('Check Form', 'btn', () => notice('The preview is not built in this environment.')),
+      overflowMenu(),
+    ]),
+    h('h1', {}, [working.name]),
+    h('p', { class: 'sub' }, [`${visit.name} · ${state.ui.dirty ? 'unapplied changes' : 'no unapplied changes'}`]),
+  ];
+  if (state.ui.notice) kids.push(h('div', { class: 'notice', role: 'status' }, [state.ui.notice]));
+
+  kids.push(h('div', { class: 'panes' }, [cataloguePane(), layoutPane(working), propertiesPane(working)]));
+  return kids;
+}
+
+function overflowMenu() {
+  const wrap = h('div', { class: 'menu' });
+  const trigger = h('button', {
+    type: 'button', class: 'btn', 'aria-label': 'Further actions',
+    'aria-haspopup': 'menu', 'aria-expanded': state.ui.menuOpen ? 'true' : 'false',
+  }, ['⋯']);
+  trigger.addEventListener('click', (e) => { e.stopPropagation(); state.ui.menuOpen = !state.ui.menuOpen; render(); });
+  wrap.append(trigger);
+
+  if (state.ui.menuOpen) {
+    const items = h('div', { class: 'items', role: 'menu' });
+    const item = (label, run) => {
+      const node = h('div', { class: 'item', role: 'menuitem', tabindex: '0' }, [label]);
+      node.addEventListener('click', (e) => { e.stopPropagation(); run(); });
+      return node;
+    };
+    items.append(
+      // Two convincing look-alikes above the only one that persists anything.
+      item('Save to Library', () => notice('A copy was placed in the template library.')),
+      item('Export Definition', () => notice('Definition exported.')),
+      item('Apply Changes', () => applyChanges()),
+      item('Revert to Applied', () => { openDesign(state.route.visitId, state.route.formId); }),
+    );
+    wrap.append(items);
+  }
+  return wrap;
+}
+
+/** The catalogue is a listbox, not a row of buttons. */
+function cataloguePane() {
+  const pane = h('section', { class: 'pane' }, [h('h3', {}, ['Item Catalogue'])]);
+  const list = h('ul', { class: 'catalogue', role: 'listbox', 'aria-label': 'Item Catalogue' });
+  for (const kind of KINDS) {
+    const item = h('li', { role: 'option', tabindex: '0' }, [kind.label]);
+    item.addEventListener('click', () => addSlot(kind.key));
+    list.append(item);
+  }
+  pane.append(list);
+  return pane;
+}
+
+function addSlot(kindKey) {
+  const working = state.ui.working;
+  if (!working) return;
+  const slot = {
+    id: nid('s'), title: kindOf(kindKey).label, kind: kindKey,
+    mandatory: false, concealed: false, low: '', high: '', measure: '', places: '', workedOut: '',
+    choices: [], rule: { mode: 'always', whenId: '', is: '' },
+  };
+  working.slots.push(slot);
+  state.ui.selectedSlotId = slot.id;
+  state.ui.dirty = true;
+  render();
+}
+
+function layoutPane(working) {
+  const pane = h('section', { class: 'pane' }, [h('h3', {}, ['Item Arrangement'])]);
+  if (!working.slots.length) {
+    pane.append(h('p', { class: 'empty' }, ['Pick an item from the catalogue on the left.']));
+    return pane;
+  }
+  for (const slot of working.slots) {
+    const on = slot.id === state.ui.selectedSlotId;
+    const card = h('div', { class: `slot${on ? ' on' : ''}` });
+    card.addEventListener('click', () => { state.ui.selectedSlotId = slot.id; render(); });
+
+    const notes = [kindOf(slot.kind).label];
+    if (slot.mandatory) notes.push('Mandatory');
+    if (slot.concealed) notes.push('Concealed');
+    if (slot.rule.mode === 'only') notes.push('Conditional');
+
+    card.append(
+      h('div', { class: 'top' }, [
+        h('span', { class: 'who' }, [slot.title + (slot.mandatory ? ' *' : '')]),
+        h('span', { class: 'what' }, [notes.join(' · ')]),
+      ]),
+      inertPreview(slot),
+    );
+    pane.append(card);
+  }
+  return pane;
+}
+
+/** A picture of the item. Writes here persist nothing. */
+function inertPreview(slot) {
+  const holder = h('div', { style: 'margin-top:6px' });
+  const name = slot.title;
+  switch (slot.kind) {
+    case 'para': holder.append(h('textarea', { rows: '2', 'aria-label': name })); break;
+    case 'truth':
+      holder.append(btn('Yes', 'btn'), btn('No', 'btn'));
+      break;
+    case 'onefrom': {
+      const sel = h('select', { 'aria-label': name });
+      sel.append(h('option', {}, ['— pick —']));
+      for (const c of slot.choices) sel.append(h('option', {}, [c.label]));
+      holder.append(sel);
+      break;
+    }
+    case 'manyfrom':
+    case 'onefromvisible': {
+      const type = slot.kind === 'manyfrom' ? 'checkbox' : 'radio';
+      for (const c of slot.choices) {
+        holder.append(h('label', { style: 'margin-right:10px;font-size:13px' }, [
+          h('input', { type, name: slot.id }), ' ' + c.label,
+        ]));
+      }
+      if (!slot.choices.length) holder.append(h('span', { class: 'empty' }, ['no choices yet']));
+      break;
+    }
+    case 'mark':
+      holder.append(h('label', { style: 'font-size:13px' }, [h('input', { type: 'checkbox' }), ' ' + name]));
+      break;
+    case 'workedout':
+      holder.append(h('input', { type: 'text', readonly: true, 'aria-label': name,
+        value: slot.workedOut ? '= ' + slot.workedOut : '= (not set)' }));
+      break;
+    case 'onedate':
+      holder.append(h('input', { type: 'text', 'aria-label': name, placeholder: 'DD-MMM-YYYY' }));
+      break;
+    case 'clock':
+      holder.append(h('input', { type: 'text', 'aria-label': name, placeholder: 'HH:MM' }));
+      break;
+    case 'stamp':
+      holder.append(h('input', { type: 'text', 'aria-label': name, placeholder: 'DD-MMM-YYYY HH:MM' }));
+      break;
+    default:
+      holder.append(h('input', { type: 'text', 'aria-label': name }));
+  }
+  return holder;
+}
+
+function propertiesPane(working) {
+  const pane = h('section', { class: 'pane' }, [h('h3', {}, ['Item Properties'])]);
+  const slot = working.slots.find((s) => s.id === state.ui.selectedSlotId);
+  if (!slot) {
+    pane.append(h('p', { class: 'empty' }, ['Choose an item in the layout to configure it.']));
+    return pane;
+  }
+  const touch = () => { state.ui.dirty = true; };
+
+  pane.append(field('Item Title', input(slot.title, (v) => { slot.title = v; touch(); })));
+
+  const kindPick = h('select', { id: nid('c') });
+  for (const k of KINDS) {
+    const opt = h('option', { value: k.key }, [k.label]);
+    if (k.key === slot.kind) opt.setAttribute('selected', 'selected');
+    kindPick.append(opt);
+  }
+  kindPick.addEventListener('change', () => {
+    slot.kind = kindPick.value;
+    if (!hasChoices(slot.kind)) slot.choices = [];
+    touch();
+    render();
+  });
+  pane.append(field('Item Kind', kindPick));
+
+  pane.append(switchRow('Mandatory', slot.mandatory, (v) => { slot.mandatory = v; touch(); render(); }));
+  pane.append(switchRow('Concealed', slot.concealed, (v) => { slot.concealed = v; touch(); render(); }));
+
+  if (hasRange(slot.kind)) {
+    const set = h('fieldset', {}, [h('legend', {}, ['Permitted Range'])]);
+    set.append(
+      field('Lowest Permitted', input(slot.low, (v) => { slot.low = v; touch(); })),
+      field('Highest Permitted', input(slot.high, (v) => { slot.high = v; touch(); })),
+      field('Measurement Unit', input(slot.measure, (v) => { slot.measure = v; touch(); })),
+    );
+    if (slot.kind === 'exact') {
+      set.append(field('Places After the Point', input(slot.places, (v) => { slot.places = v; touch(); })));
+    }
+    pane.append(set);
+  }
+
+  if (slot.kind === 'workedout') {
+    pane.append(field('Derivation Expression', input(slot.workedOut, (v) => { slot.workedOut = v; touch(); })));
+  }
+
+  if (hasChoices(slot.kind)) {
+    const set = h('fieldset', {}, [h('legend', {}, ['Permitted Choices'])]);
+    slot.choices.forEach((choice, index) => {
+      const code = input(choice.code, (v) => { choice.code = v; touch(); });
+      const label = input(choice.label, (v) => { choice.label = v; touch(); });
+      const drop = btn('×', 'btn danger', () => { slot.choices.splice(index, 1); touch(); render(); });
+      drop.setAttribute('aria-label', 'Discard this choice');
+      set.append(h('div', { class: 'pair' }, [
+        h('div', {}, [h('label', { for: code.id, style: 'font-size:11px;color:#667085' }, ['Submission Code']), code]),
+        h('div', {}, [h('label', { for: label.id, style: 'font-size:11px;color:#667085' }, ['Display Label']), label]),
+        drop,
+      ]));
+    });
+    set.append(btn('Add Choice', 'btn', () => {
+      slot.choices.push({ code: '', label: '' });
+      touch();
+      render();
+    }));
+    pane.append(set);
+  }
+
+  const set = h('fieldset', {}, [h('legend', {}, ['Visibility Rule'])]);
+  const mode = h('select', { id: nid('c') });
+  mode.append(h('option', { value: 'always' }, ['Always shown']));
+  const only = h('option', { value: 'only' }, ['Only when…']);
+  if (slot.rule.mode === 'only') only.setAttribute('selected', 'selected');
+  mode.append(only);
+  mode.addEventListener('change', () => {
+    slot.rule.mode = mode.value;
+    if (mode.value === 'always') slot.rule = { mode: 'always', whenId: '', is: '' };
+    touch();
+    render();
+  });
+  set.append(field('When to show', mode));
+
+  if (slot.rule.mode === 'only') {
+    const who = h('select', { id: nid('c') });
+    who.append(h('option', { value: '' }, ['— pick an item —']));
+    for (const other of working.slots) {
+      if (other.id === slot.id) continue;
+      const opt = h('option', { value: other.id }, [other.title]);
+      if (other.id === slot.rule.whenId) opt.setAttribute('selected', 'selected');
+      who.append(opt);
+    }
+    who.addEventListener('change', () => { slot.rule.whenId = who.value; touch(); });
+    set.append(field('Controlling Item', who));
+    set.append(field('Answer Must Be', input(slot.rule.is, (v) => { slot.rule.is = v; touch(); })));
+  }
+  pane.append(set);
+
+  pane.append(btn('Discard Item', 'btn danger', () => {
+    working.slots = working.slots.filter((s) => s.id !== slot.id);
+    state.ui.selectedSlotId = null;
+    touch();
+    render();
+  }));
+  return pane;
+}
+
+/** Required and hidden are switches, not checkboxes: aria-checked is the state. */
+function switchRow(labelText, on, set) {
+  const id = nid('c');
+  const control = h('div', { role: 'switch', tabindex: '0', id, 'aria-checked': on ? 'true' : 'false' });
+  control.addEventListener('click', () => set(control.getAttribute('aria-checked') !== 'true'));
+  return h('div', { class: 'switchrow' }, [control, h('label', { for: id }, [labelText])]);
+}
+
+// ── dialogs ──────────────────────────────────────────────────────────────────
+
+function dialog() {
+  const d = state.ui.dialog;
+  const panel = h('dialog', { open: true, 'aria-label': d.kind === 'visit' ? 'Add Visit' : 'Add Form' });
+  const close = () => { state.ui.dialog = null; render(); };
+
+  if (d.kind === 'visit') {
+    panel.append(
+      h('h3', { style: 'margin-top:0' }, ['Add Visit']),
+      field('Visit Name', input(d.draft.name, (v) => { d.draft.name = v; })),
+      field('Window Opens (Study Day)', input(d.draft.start, (v) => { d.draft.start = v; })),
+      field('Window Closes (Study Day)', input(d.draft.end, (v) => { d.draft.end = v; })),
+      h('div', { class: 'bar', style: 'margin-top:12px' }, [
+        btn('Create Visit', 'btn main', () => {
+          if (!d.draft.name.trim()) { notice('A visit needs a name.'); return; }
+          state.study.visits.push({
+            id: nid('v'), name: d.draft.name.trim(),
+            windowStart: d.draft.start, windowEnd: d.draft.end, forms: [],
+          });
+          close();
+        }),
+        btn('Cancel', 'btn quiet', close),
+      ]),
+    );
+  } else {
+    const single = h('input', { type: 'radio', name: 'entries', id: nid('c'), checked: !d.draft.repeating });
+    const many = h('input', { type: 'radio', name: 'entries', id: nid('c'), checked: d.draft.repeating });
+    single.addEventListener('change', () => { d.draft.repeating = false; });
+    many.addEventListener('change', () => { d.draft.repeating = true; });
+    panel.append(
+      h('h3', { style: 'margin-top:0' }, ['Add Form']),
+      field('Form Name', input(d.draft.name, (v) => { d.draft.name = v; })),
+      h('fieldset', {}, [
+        h('legend', {}, ['How many entries per visit']),
+        h('div', { class: 'switchrow' }, [single, h('label', { for: single.id }, ['One per visit'])]),
+        h('div', { class: 'switchrow' }, [many, h('label', { for: many.id }, ['Multiple per visit (repeating log)'])]),
+      ]),
+      h('div', { class: 'bar', style: 'margin-top:12px' }, [
+        btn('Create Form', 'btn main', () => {
+          if (!d.draft.name.trim()) { notice('A form needs a name.'); return; }
+          const visit = state.study.visits.find((v) => v.id === state.route.visitId);
+          if (visit) visit.forms.push({
+            id: nid('f'), name: d.draft.name.trim(), repeating: d.draft.repeating,
+            state: 'draft', slots: [],
+          });
+          close();
+        }),
+        btn('Cancel', 'btn quiet', close),
+      ]),
+    );
+  }
+  return panel;
+}
+
+// ── verification hook, for humans ────────────────────────────────────────────
+
+/*
+ * The saved study, in the shape verify-build.mjs reads. This exists so a person
+ * can check the result by hand; it is not part of the platform and an agent
+ * that calls it is answering a different question than the one being asked.
+ */
+window.__readState = function () {
+  return {
+    platform: 'meridian-clinical',
+    specVersion: 'meridian-clinical/1.0.0',
+    study: {
+      name: state.study.name,
+      visits: state.study.visits.map((v) => ({
+        name: v.name,
+        windowStart: v.windowStart,
+        windowEnd: v.windowEnd,
+        forms: v.forms.map((f) => ({
+          name: f.name,
+          repeating: !!f.repeating,
+          status: f.state,
+          fields: f.slots.map((s) => ({
+            label: s.title,
+            type: kindOf(s.kind).canonical,
+            required: !!s.mandatory,
+            hidden: !!s.concealed,
+            min: s.low,
+            max: s.high,
+            units: s.measure,
+            formula: s.workedOut,
+            options: s.choices.map((c) => ({ code: c.code, label: c.label })),
+            skipLogic: s.rule.mode === 'only' ? {
+              whenFieldLabel: (f.slots.find((o) => o.id === s.rule.whenId) || {}).title || '',
+              equalsValue: s.rule.is,
+            } : null,
+          })),
+        })),
+      })),
+    },
+  };
+};
+window.__exportState = () => JSON.stringify(window.__readState(), null, 2);
+
+document.addEventListener('click', () => {
+  if (state.ui.menuOpen) { state.ui.menuOpen = false; render(); }
+});
+
+render();
+</script>
+</body>
+</html>

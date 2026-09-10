@@ -1,0 +1,1969 @@
+{
+  "trace": [
+    {
+      "at": 1788879412168,
+      "kind": "built",
+      "message": "visit \"Screening\"",
+      "path": ""
+    },
+    {
+      "at": 1788879412466,
+      "kind": "built",
+      "message": "visit \"Baseline (Day 1)\"",
+      "path": ""
+    },
+    {
+      "at": 1788879412756,
+      "kind": "built",
+      "message": "visit \"Week 4\"",
+      "path": ""
+    },
+    {
+      "at": 1788879413063,
+      "kind": "built",
+      "message": "visit \"End of Treatment (Week 12)\"",
+      "path": ""
+    },
+    {
+      "at": 1788879413326,
+      "kind": "built",
+      "message": "document \"Demographics\"",
+      "path": ""
+    },
+    {
+      "at": 1788879413526,
+      "kind": "built",
+      "message": "document \"Informed Consent\"",
+      "path": ""
+    },
+    {
+      "at": 1788879413725,
+      "kind": "built",
+      "message": "document \"Eligibility Criteria\"",
+      "path": ""
+    },
+    {
+      "at": 1788879413886,
+      "kind": "set",
+      "message": "repeating",
+      "path": ""
+    },
+    {
+      "at": 1788879413979,
+      "kind": "built",
+      "message": "document \"Medical History\"",
+      "path": ""
+    },
+    {
+      "at": 1788879414126,
+      "kind": "set",
+      "message": "repeating",
+      "path": ""
+    },
+    {
+      "at": 1788879414234,
+      "kind": "built",
+      "message": "document \"Prior and Concomitant Medications\"",
+      "path": ""
+    },
+    {
+      "at": 1788879414435,
+      "kind": "built",
+      "message": "document \"Vital Signs\"",
+      "path": ""
+    },
+    {
+      "at": 1788879414647,
+      "kind": "built",
+      "message": "document \"Local Laboratory - Hematology\"",
+      "path": ""
+    },
+    {
+      "at": 1788879414701,
+      "kind": "calibrate",
+      "message": "probing the element library",
+      "path": ""
+    }
+  ],
+  "report": {
+    "counts": {
+      "built": 11,
+      "escalated": 0,
+      "unreached": 229,
+      "plan": 240,
+      "unaccounted": 0
+    },
+    "reason": "could not open the designer for \"Demographics\"",
+    "warnings": [],
+    "platform": {
+      "types": {
+        "decimal": {
+          "entry": "Measurement",
+          "describe": {
+            "cap": "action",
+            "name": "Measurement",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.8,
+          "evidence": [
+            "a range with decimal precision"
+          ]
+        },
+        "integer": {
+          "entry": "Tally Counter",
+          "describe": {
+            "cap": "action",
+            "name": "Tally Counter",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.4166666666666667,
+          "evidence": [
+            "a range with no decimal precision"
+          ]
+        },
+        "boolean": {
+          "entry": "Yes or No",
+          "describe": {
+            "cap": "action",
+            "name": "Yes or No",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.9090909090909091,
+          "evidence": [
+            "the field renders yes/no controls"
+          ]
+        },
+        "single_select": {
+          "entry": "Selector Menu",
+          "describe": {
+            "cap": "action",
+            "name": "Selector Menu",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.3333333333333333,
+          "evidence": [
+            "a coded values editor appeared"
+          ]
+        },
+        "radio": {
+          "entry": "Option Buttons",
+          "describe": {
+            "cap": "action",
+            "name": "Option Buttons",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.3333333333333333,
+          "evidence": [
+            "a coded values editor appeared"
+          ]
+        },
+        "multi_select": {
+          "entry": "Pick Several",
+          "describe": {
+            "cap": "action",
+            "name": "Pick Several",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.2,
+          "evidence": [
+            "a coded values editor appeared"
+          ]
+        },
+        "checkbox": {
+          "entry": "Single Tick",
+          "describe": {
+            "cap": "action",
+            "name": "Single Tick",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.75,
+          "evidence": []
+        },
+        "text": {
+          "entry": "Short Answer",
+          "describe": {
+            "cap": "action",
+            "name": "Short Answer",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.6,
+          "evidence": []
+        },
+        "date": {
+          "entry": "Day Picker",
+          "describe": {
+            "cap": "action",
+            "name": "Day Picker",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.6,
+          "evidence": []
+        },
+        "datetime": {
+          "entry": "Moment Picker",
+          "describe": {
+            "cap": "action",
+            "name": "Moment Picker",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.6,
+          "evidence": []
+        },
+        "textarea": {
+          "entry": "Long Answer",
+          "describe": {
+            "cap": "action",
+            "name": "Long Answer",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.6,
+          "evidence": []
+        },
+        "time": {
+          "entry": "Clock Reading",
+          "describe": {
+            "cap": "action",
+            "name": "Clock Reading",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.6,
+          "evidence": []
+        },
+        "calculated": {
+          "entry": "Computed Value",
+          "describe": {
+            "cap": "action",
+            "name": "Computed Value",
+            "context": [
+              "Question Palette"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.3333333333333333,
+          "evidence": []
+        }
+      },
+      "commit": ""
+    },
+    "items": [
+      {
+        "path": "visits[0]",
+        "kind": "visit",
+        "name": "Screening",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0]",
+        "kind": "form",
+        "name": "Demographics",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Subject Initials",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Date of Birth",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Sex at Birth",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Race",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Ethnicity",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Height",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[6]",
+        "kind": "field",
+        "name": "Weight",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[7]",
+        "kind": "field",
+        "name": "Body Mass Index",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[1]",
+        "kind": "form",
+        "name": "Informed Consent",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Informed Consent Obtained",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Date of Consent",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Time of Consent",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Consent Form Version",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Consented By",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Copy Provided to Subject",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2]",
+        "kind": "form",
+        "name": "Eligibility Criteria",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Age 18 Years or Older at Consent",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Confirmed Diagnosis of Plaque Psoriasis",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Duration of Diagnosis",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[3]",
+        "kind": "field",
+        "name": "Written Informed Consent Provided",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Any Exclusionary Condition Present",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Exclusionary Conditions",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[5].skip_logic",
+        "kind": "rule",
+        "name": "Exclusionary Conditions",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3]",
+        "kind": "form",
+        "name": "Medical History",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3].fields[0]",
+        "kind": "field",
+        "name": "Condition",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3].fields[1]",
+        "kind": "field",
+        "name": "Body System",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3].fields[2]",
+        "kind": "field",
+        "name": "Onset Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3].fields[3]",
+        "kind": "field",
+        "name": "Ongoing",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3].fields[4]",
+        "kind": "field",
+        "name": "Notes",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4]",
+        "kind": "form",
+        "name": "Prior and Concomitant Medications",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Medication Name",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Indication",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Dose",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Route",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Frequency",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Start Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[6]",
+        "kind": "field",
+        "name": "Ongoing",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6]",
+        "kind": "form",
+        "name": "Local Laboratory - Hematology",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[0]",
+        "kind": "field",
+        "name": "Collection Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[1]",
+        "kind": "field",
+        "name": "Collection Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Hemoglobin",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Hematocrit",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[4]",
+        "kind": "field",
+        "name": "White Blood Cell Count",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Platelet Count",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Sample Condition",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1]",
+        "kind": "visit",
+        "name": "Baseline (Day 1)",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0]",
+        "kind": "form",
+        "name": "Visit Status",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Visit Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Visit Occurred",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Visit Type",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Study Day",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Visit Window Deviation",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2]",
+        "kind": "form",
+        "name": "Physical Examination",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Examination Performed",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Examination Date and Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[1].skip_logic",
+        "kind": "rule",
+        "name": "Examination Date and Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Body Systems Examined",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[3]",
+        "kind": "field",
+        "name": "General Appearance",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Abnormal Findings",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Abnormal Findings",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Subject Fasting",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3]",
+        "kind": "form",
+        "name": "12-Lead ECG",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[0]",
+        "kind": "field",
+        "name": "ECG Date and Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[1]",
+        "kind": "field",
+        "name": "Ventricular Rate",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[2]",
+        "kind": "field",
+        "name": "PR Interval",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[3]",
+        "kind": "field",
+        "name": "QRS Duration",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[4]",
+        "kind": "field",
+        "name": "QT Interval",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[5]",
+        "kind": "field",
+        "name": "QTcF Interval",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[6]",
+        "kind": "field",
+        "name": "Overall Interpretation",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[7]",
+        "kind": "field",
+        "name": "Interpretation Comment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4]",
+        "kind": "form",
+        "name": "Randomization",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Randomization Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Randomization Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Randomization Number",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Treatment Arm Assigned",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Prior Biologic Use",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Randomization Confirmed in IRT",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5]",
+        "kind": "form",
+        "name": "Study Drug Administration",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Study Drug Administered",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[1]",
+        "kind": "field",
+        "name": "Administration Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Administration Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Dose Administered",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Route of Administration",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Injection Site",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Reason Not Administered",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[6].skip_logic",
+        "kind": "rule",
+        "name": "Reason Not Administered",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6]",
+        "kind": "form",
+        "name": "Disease Activity Assessment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[0]",
+        "kind": "field",
+        "name": "Assessment Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[1]",
+        "kind": "field",
+        "name": "PASI Total Score",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Body Surface Area Involved",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Physician Global Assessment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[4]",
+        "kind": "field",
+        "name": "Patient Global Assessment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Itch Numeric Rating Scale",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Assessment Complete",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2]",
+        "kind": "visit",
+        "name": "Week 4",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0]",
+        "kind": "form",
+        "name": "Visit Status",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Visit Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Visit Occurred",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Visit Type",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Study Day",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Visit Window Deviation",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2]",
+        "kind": "form",
+        "name": "Study Drug Administration",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Study Drug Administered",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Administration Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Administration Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[3]",
+        "kind": "field",
+        "name": "Dose Administered",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Route of Administration",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Injection Site",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[6]",
+        "kind": "field",
+        "name": "Reason Not Administered",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[6].skip_logic",
+        "kind": "rule",
+        "name": "Reason Not Administered",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3]",
+        "kind": "form",
+        "name": "Disease Activity Assessment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[0]",
+        "kind": "field",
+        "name": "Assessment Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[1]",
+        "kind": "field",
+        "name": "PASI Total Score",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[2]",
+        "kind": "field",
+        "name": "Body Surface Area Involved",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[3]",
+        "kind": "field",
+        "name": "Physician Global Assessment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[4]",
+        "kind": "field",
+        "name": "Patient Global Assessment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[5]",
+        "kind": "field",
+        "name": "Itch Numeric Rating Scale",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[6]",
+        "kind": "field",
+        "name": "Assessment Complete",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4]",
+        "kind": "form",
+        "name": "Adverse Events",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Adverse Event Term",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Onset Date and Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Severity",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Serious",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Relationship to Study Drug",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Action Taken with Study Drug",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[6]",
+        "kind": "field",
+        "name": "Outcome",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[7]",
+        "kind": "field",
+        "name": "Resolution Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[7].skip_logic",
+        "kind": "rule",
+        "name": "Resolution Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5]",
+        "kind": "form",
+        "name": "Concomitant Medications",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Medication Name",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[1]",
+        "kind": "field",
+        "name": "Indication",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Dose",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Route",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Frequency",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Start Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Ongoing",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6]",
+        "kind": "form",
+        "name": "Local Laboratory - Chemistry",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[0]",
+        "kind": "field",
+        "name": "Collection Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[1]",
+        "kind": "field",
+        "name": "Collection Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Alanine Aminotransferase",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Aspartate Aminotransferase",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[4]",
+        "kind": "field",
+        "name": "Total Bilirubin",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Creatinine",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Fasting Status",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3]",
+        "kind": "visit",
+        "name": "End of Treatment (Week 12)",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0]",
+        "kind": "form",
+        "name": "Visit Status",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Visit Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Visit Occurred",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Visit Type",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Study Day",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Visit Window Deviation",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2]",
+        "kind": "form",
+        "name": "Physical Examination",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Examination Performed",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Examination Date and Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[1].skip_logic",
+        "kind": "rule",
+        "name": "Examination Date and Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Body Systems Examined",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[3]",
+        "kind": "field",
+        "name": "General Appearance",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Abnormal Findings",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Abnormal Findings",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Subject Fasting",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3]",
+        "kind": "form",
+        "name": "12-Lead ECG",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[0]",
+        "kind": "field",
+        "name": "ECG Date and Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[1]",
+        "kind": "field",
+        "name": "Ventricular Rate",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[2]",
+        "kind": "field",
+        "name": "PR Interval",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[3]",
+        "kind": "field",
+        "name": "QRS Duration",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[4]",
+        "kind": "field",
+        "name": "QT Interval",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[5]",
+        "kind": "field",
+        "name": "QTcF Interval",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[6]",
+        "kind": "field",
+        "name": "Overall Interpretation",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[7]",
+        "kind": "field",
+        "name": "Interpretation Comment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4]",
+        "kind": "form",
+        "name": "Adverse Events",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Adverse Event Term",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Onset Date and Time",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Severity",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Serious",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Relationship to Study Drug",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Action Taken with Study Drug",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[6]",
+        "kind": "field",
+        "name": "Outcome",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[7]",
+        "kind": "field",
+        "name": "Resolution Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[7].skip_logic",
+        "kind": "rule",
+        "name": "Resolution Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5]",
+        "kind": "form",
+        "name": "Disease Activity Assessment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Assessment Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[1]",
+        "kind": "field",
+        "name": "PASI Total Score",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Body Surface Area Involved",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Physician Global Assessment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Patient Global Assessment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Itch Numeric Rating Scale",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Assessment Complete",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6]",
+        "kind": "form",
+        "name": "End of Treatment",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[0]",
+        "kind": "field",
+        "name": "End of Treatment Date",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[1]",
+        "kind": "field",
+        "name": "Completed Treatment as Planned",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Primary Reason for Discontinuation",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[2].skip_logic",
+        "kind": "rule",
+        "name": "Primary Reason for Discontinuation",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Date of Last Dose",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[4]",
+        "kind": "field",
+        "name": "Number of Doses Received",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Discontinuation Comments",
+        "status": "unreached",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Subject Withdrew Consent",
+        "status": "unreached",
+        "note": ""
+      }
+    ],
+    "durationMs": 4384,
+    "stopped": false
+  }
+}

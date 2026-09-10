@@ -1,0 +1,1780 @@
+{
+  "trace": [
+    {
+      "at": 1788884914987,
+      "kind": "built",
+      "message": "visit \"Screening\"",
+      "path": ""
+    },
+    {
+      "at": 1788884915305,
+      "kind": "built",
+      "message": "visit \"Baseline (Day 1)\"",
+      "path": ""
+    },
+    {
+      "at": 1788884915621,
+      "kind": "built",
+      "message": "visit \"Week 4\"",
+      "path": ""
+    },
+    {
+      "at": 1788884915937,
+      "kind": "built",
+      "message": "visit \"End of Treatment (Week 12)\"",
+      "path": ""
+    },
+    {
+      "at": 1788884916191,
+      "kind": "built",
+      "message": "document \"Demographics\"",
+      "path": ""
+    },
+    {
+      "at": 1788884916400,
+      "kind": "built",
+      "message": "document \"Informed Consent\"",
+      "path": ""
+    },
+    {
+      "at": 1788884916611,
+      "kind": "built",
+      "message": "document \"Eligibility Criteria\"",
+      "path": ""
+    },
+    {
+      "at": 1788884916772,
+      "kind": "set",
+      "message": "repeating",
+      "path": ""
+    },
+    {
+      "at": 1788884916876,
+      "kind": "built",
+      "message": "document \"Medical History\"",
+      "path": ""
+    },
+    {
+      "at": 1788884917020,
+      "kind": "set",
+      "message": "repeating",
+      "path": ""
+    },
+    {
+      "at": 1788884917125,
+      "kind": "built",
+      "message": "document \"Prior and Concomitant Medications\"",
+      "path": ""
+    },
+    {
+      "at": 1788884917325,
+      "kind": "built",
+      "message": "document \"Vital Signs\"",
+      "path": ""
+    },
+    {
+      "at": 1788884917533,
+      "kind": "built",
+      "message": "document \"Local Laboratory - Hematology\"",
+      "path": ""
+    }
+  ],
+  "report": {
+    "counts": {
+      "built": 11,
+      "escalated": 0,
+      "unreached": 229,
+      "plan": 240,
+      "unaccounted": 0
+    },
+    "warnings": [],
+    "platform": {
+      "types": {},
+      "commit": ""
+    },
+    "items": [
+      {
+        "path": "visits[0]",
+        "kind": "visit",
+        "name": "Screening",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0]",
+        "kind": "form",
+        "name": "Demographics",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Subject Initials",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Date of Birth",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Sex at Birth",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Race",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Ethnicity",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Height",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[6]",
+        "kind": "field",
+        "name": "Weight",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[0].fields[7]",
+        "kind": "field",
+        "name": "Body Mass Index",
+        "status": "unreached",
+        "note": "could not open the designer for \"Demographics\""
+      },
+      {
+        "path": "visits[0].forms[1]",
+        "kind": "form",
+        "name": "Informed Consent",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Informed Consent Obtained",
+        "status": "unreached",
+        "note": "could not open the designer for \"Informed Consent\""
+      },
+      {
+        "path": "visits[0].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Date of Consent",
+        "status": "unreached",
+        "note": "could not open the designer for \"Informed Consent\""
+      },
+      {
+        "path": "visits[0].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Time of Consent",
+        "status": "unreached",
+        "note": "could not open the designer for \"Informed Consent\""
+      },
+      {
+        "path": "visits[0].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Consent Form Version",
+        "status": "unreached",
+        "note": "could not open the designer for \"Informed Consent\""
+      },
+      {
+        "path": "visits[0].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Consented By",
+        "status": "unreached",
+        "note": "could not open the designer for \"Informed Consent\""
+      },
+      {
+        "path": "visits[0].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Copy Provided to Subject",
+        "status": "unreached",
+        "note": "could not open the designer for \"Informed Consent\""
+      },
+      {
+        "path": "visits[0].forms[2]",
+        "kind": "form",
+        "name": "Eligibility Criteria",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Age 18 Years or Older at Consent",
+        "status": "unreached",
+        "note": "could not open the designer for \"Eligibility Criteria\""
+      },
+      {
+        "path": "visits[0].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Confirmed Diagnosis of Plaque Psoriasis",
+        "status": "unreached",
+        "note": "could not open the designer for \"Eligibility Criteria\""
+      },
+      {
+        "path": "visits[0].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Duration of Diagnosis",
+        "status": "unreached",
+        "note": "could not open the designer for \"Eligibility Criteria\""
+      },
+      {
+        "path": "visits[0].forms[2].fields[3]",
+        "kind": "field",
+        "name": "Written Informed Consent Provided",
+        "status": "unreached",
+        "note": "could not open the designer for \"Eligibility Criteria\""
+      },
+      {
+        "path": "visits[0].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Any Exclusionary Condition Present",
+        "status": "unreached",
+        "note": "could not open the designer for \"Eligibility Criteria\""
+      },
+      {
+        "path": "visits[0].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Exclusionary Conditions",
+        "status": "unreached",
+        "note": "could not open the designer for \"Eligibility Criteria\""
+      },
+      {
+        "path": "visits[0].forms[2].fields[5].skip_logic",
+        "kind": "rule",
+        "name": "Exclusionary Conditions",
+        "status": "unreached",
+        "note": "could not open the designer for \"Eligibility Criteria\""
+      },
+      {
+        "path": "visits[0].forms[3]",
+        "kind": "form",
+        "name": "Medical History",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3].fields[0]",
+        "kind": "field",
+        "name": "Condition",
+        "status": "unreached",
+        "note": "could not open the designer for \"Medical History\""
+      },
+      {
+        "path": "visits[0].forms[3].fields[1]",
+        "kind": "field",
+        "name": "Body System",
+        "status": "unreached",
+        "note": "could not open the designer for \"Medical History\""
+      },
+      {
+        "path": "visits[0].forms[3].fields[2]",
+        "kind": "field",
+        "name": "Onset Date",
+        "status": "unreached",
+        "note": "could not open the designer for \"Medical History\""
+      },
+      {
+        "path": "visits[0].forms[3].fields[3]",
+        "kind": "field",
+        "name": "Ongoing",
+        "status": "unreached",
+        "note": "could not open the designer for \"Medical History\""
+      },
+      {
+        "path": "visits[0].forms[3].fields[4]",
+        "kind": "field",
+        "name": "Notes",
+        "status": "unreached",
+        "note": "could not open the designer for \"Medical History\""
+      },
+      {
+        "path": "visits[0].forms[4]",
+        "kind": "form",
+        "name": "Prior and Concomitant Medications",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Medication Name",
+        "status": "unreached",
+        "note": "could not open the designer for \"Prior and Concomitant Medications\""
+      },
+      {
+        "path": "visits[0].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Indication",
+        "status": "unreached",
+        "note": "could not open the designer for \"Prior and Concomitant Medications\""
+      },
+      {
+        "path": "visits[0].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Dose",
+        "status": "unreached",
+        "note": "could not open the designer for \"Prior and Concomitant Medications\""
+      },
+      {
+        "path": "visits[0].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Route",
+        "status": "unreached",
+        "note": "could not open the designer for \"Prior and Concomitant Medications\""
+      },
+      {
+        "path": "visits[0].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Frequency",
+        "status": "unreached",
+        "note": "could not open the designer for \"Prior and Concomitant Medications\""
+      },
+      {
+        "path": "visits[0].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Start Date",
+        "status": "unreached",
+        "note": "could not open the designer for \"Prior and Concomitant Medications\""
+      },
+      {
+        "path": "visits[0].forms[4].fields[6]",
+        "kind": "field",
+        "name": "Ongoing",
+        "status": "unreached",
+        "note": "could not open the designer for \"Prior and Concomitant Medications\""
+      },
+      {
+        "path": "visits[0].forms[5]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "unreached",
+        "note": "could not open the designer for \"Vital Signs\""
+      },
+      {
+        "path": "visits[0].forms[5].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "unreached",
+        "note": "could not open the designer for \"Vital Signs\""
+      },
+      {
+        "path": "visits[0].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "unreached",
+        "note": "could not open the designer for \"Vital Signs\""
+      },
+      {
+        "path": "visits[0].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "unreached",
+        "note": "could not open the designer for \"Vital Signs\""
+      },
+      {
+        "path": "visits[0].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "unreached",
+        "note": "could not open the designer for \"Vital Signs\""
+      },
+      {
+        "path": "visits[0].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "unreached",
+        "note": "could not open the designer for \"Vital Signs\""
+      },
+      {
+        "path": "visits[0].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "unreached",
+        "note": "could not open the designer for \"Vital Signs\""
+      },
+      {
+        "path": "visits[0].forms[5].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "unreached",
+        "note": "could not open the designer for \"Vital Signs\""
+      },
+      {
+        "path": "visits[0].forms[6]",
+        "kind": "form",
+        "name": "Local Laboratory - Hematology",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[0]",
+        "kind": "field",
+        "name": "Collection Date",
+        "status": "unreached",
+        "note": "could not open the designer for \"Local Laboratory - Hematology\""
+      },
+      {
+        "path": "visits[0].forms[6].fields[1]",
+        "kind": "field",
+        "name": "Collection Time",
+        "status": "unreached",
+        "note": "could not open the designer for \"Local Laboratory - Hematology\""
+      },
+      {
+        "path": "visits[0].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Hemoglobin",
+        "status": "unreached",
+        "note": "could not open the designer for \"Local Laboratory - Hematology\""
+      },
+      {
+        "path": "visits[0].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Hematocrit",
+        "status": "unreached",
+        "note": "could not open the designer for \"Local Laboratory - Hematology\""
+      },
+      {
+        "path": "visits[0].forms[6].fields[4]",
+        "kind": "field",
+        "name": "White Blood Cell Count",
+        "status": "unreached",
+        "note": "could not open the designer for \"Local Laboratory - Hematology\""
+      },
+      {
+        "path": "visits[0].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Platelet Count",
+        "status": "unreached",
+        "note": "could not open the designer for \"Local Laboratory - Hematology\""
+      },
+      {
+        "path": "visits[0].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Sample Condition",
+        "status": "unreached",
+        "note": "could not open the designer for \"Local Laboratory - Hematology\""
+      },
+      {
+        "path": "visits[1]",
+        "kind": "visit",
+        "name": "Baseline (Day 1)",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0]",
+        "kind": "form",
+        "name": "Visit Status",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Visit Date",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Visit Occurred",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Visit Type",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Study Day",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[0].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Visit Window Deviation",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[1]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[1].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[1].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[2]",
+        "kind": "form",
+        "name": "Physical Examination",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Examination Performed",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Examination Date and Time",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[2].fields[1].skip_logic",
+        "kind": "rule",
+        "name": "Examination Date and Time",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Body Systems Examined",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[2].fields[3]",
+        "kind": "field",
+        "name": "General Appearance",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Abnormal Findings",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[2].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Abnormal Findings",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Subject Fasting",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[3]",
+        "kind": "form",
+        "name": "12-Lead ECG",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[3].fields[0]",
+        "kind": "field",
+        "name": "ECG Date and Time",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[3].fields[1]",
+        "kind": "field",
+        "name": "Ventricular Rate",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[3].fields[2]",
+        "kind": "field",
+        "name": "PR Interval",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[3].fields[3]",
+        "kind": "field",
+        "name": "QRS Duration",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[3].fields[4]",
+        "kind": "field",
+        "name": "QT Interval",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[3].fields[5]",
+        "kind": "field",
+        "name": "QTcF Interval",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[3].fields[6]",
+        "kind": "field",
+        "name": "Overall Interpretation",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[3].fields[7]",
+        "kind": "field",
+        "name": "Interpretation Comment",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[4]",
+        "kind": "form",
+        "name": "Randomization",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Randomization Date",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Randomization Time",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Randomization Number",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Treatment Arm Assigned",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Prior Biologic Use",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Randomization Confirmed in IRT",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[5]",
+        "kind": "form",
+        "name": "Study Drug Administration",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Study Drug Administered",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[5].fields[1]",
+        "kind": "field",
+        "name": "Administration Date",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Administration Time",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Dose Administered",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Route of Administration",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Injection Site",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Reason Not Administered",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[5].fields[6].skip_logic",
+        "kind": "rule",
+        "name": "Reason Not Administered",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[6]",
+        "kind": "form",
+        "name": "Disease Activity Assessment",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[6].fields[0]",
+        "kind": "field",
+        "name": "Assessment Date",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[6].fields[1]",
+        "kind": "field",
+        "name": "PASI Total Score",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Body Surface Area Involved",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Physician Global Assessment",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[6].fields[4]",
+        "kind": "field",
+        "name": "Patient Global Assessment",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Itch Numeric Rating Scale",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[1].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Assessment Complete",
+        "status": "unreached",
+        "note": "could not open visit \"Baseline (Day 1)\""
+      },
+      {
+        "path": "visits[2]",
+        "kind": "visit",
+        "name": "Week 4",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0]",
+        "kind": "form",
+        "name": "Visit Status",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Visit Date",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Visit Occurred",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Visit Type",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Study Day",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[0].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Visit Window Deviation",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[1]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[1].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[1].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[2]",
+        "kind": "form",
+        "name": "Study Drug Administration",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Study Drug Administered",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Administration Date",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Administration Time",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[2].fields[3]",
+        "kind": "field",
+        "name": "Dose Administered",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Route of Administration",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Injection Site",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[2].fields[6]",
+        "kind": "field",
+        "name": "Reason Not Administered",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[2].fields[6].skip_logic",
+        "kind": "rule",
+        "name": "Reason Not Administered",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[3]",
+        "kind": "form",
+        "name": "Disease Activity Assessment",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[3].fields[0]",
+        "kind": "field",
+        "name": "Assessment Date",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[3].fields[1]",
+        "kind": "field",
+        "name": "PASI Total Score",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[3].fields[2]",
+        "kind": "field",
+        "name": "Body Surface Area Involved",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[3].fields[3]",
+        "kind": "field",
+        "name": "Physician Global Assessment",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[3].fields[4]",
+        "kind": "field",
+        "name": "Patient Global Assessment",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[3].fields[5]",
+        "kind": "field",
+        "name": "Itch Numeric Rating Scale",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[3].fields[6]",
+        "kind": "field",
+        "name": "Assessment Complete",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[4]",
+        "kind": "form",
+        "name": "Adverse Events",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Adverse Event Term",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Onset Date and Time",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Severity",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Serious",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Relationship to Study Drug",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Action Taken with Study Drug",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[4].fields[6]",
+        "kind": "field",
+        "name": "Outcome",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[4].fields[7]",
+        "kind": "field",
+        "name": "Resolution Date",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[4].fields[7].skip_logic",
+        "kind": "rule",
+        "name": "Resolution Date",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[5]",
+        "kind": "form",
+        "name": "Concomitant Medications",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Medication Name",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[5].fields[1]",
+        "kind": "field",
+        "name": "Indication",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Dose",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Route",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Frequency",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Start Date",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Ongoing",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[6]",
+        "kind": "form",
+        "name": "Local Laboratory - Chemistry",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[6].fields[0]",
+        "kind": "field",
+        "name": "Collection Date",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[6].fields[1]",
+        "kind": "field",
+        "name": "Collection Time",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Alanine Aminotransferase",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Aspartate Aminotransferase",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[6].fields[4]",
+        "kind": "field",
+        "name": "Total Bilirubin",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Creatinine",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[2].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Fasting Status",
+        "status": "unreached",
+        "note": "could not open visit \"Week 4\""
+      },
+      {
+        "path": "visits[3]",
+        "kind": "visit",
+        "name": "End of Treatment (Week 12)",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0]",
+        "kind": "form",
+        "name": "Visit Status",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Visit Date",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Visit Occurred",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Visit Type",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Study Day",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[0].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Reason Visit Not Performed",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Visit Window Deviation",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[1]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[1].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[1].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[2]",
+        "kind": "form",
+        "name": "Physical Examination",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Examination Performed",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Examination Date and Time",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[2].fields[1].skip_logic",
+        "kind": "rule",
+        "name": "Examination Date and Time",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Body Systems Examined",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[2].fields[3]",
+        "kind": "field",
+        "name": "General Appearance",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Abnormal Findings",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[2].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Abnormal Findings",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Subject Fasting",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[3]",
+        "kind": "form",
+        "name": "12-Lead ECG",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[3].fields[0]",
+        "kind": "field",
+        "name": "ECG Date and Time",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[3].fields[1]",
+        "kind": "field",
+        "name": "Ventricular Rate",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[3].fields[2]",
+        "kind": "field",
+        "name": "PR Interval",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[3].fields[3]",
+        "kind": "field",
+        "name": "QRS Duration",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[3].fields[4]",
+        "kind": "field",
+        "name": "QT Interval",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[3].fields[5]",
+        "kind": "field",
+        "name": "QTcF Interval",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[3].fields[6]",
+        "kind": "field",
+        "name": "Overall Interpretation",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[3].fields[7]",
+        "kind": "field",
+        "name": "Interpretation Comment",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[4]",
+        "kind": "form",
+        "name": "Adverse Events",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Adverse Event Term",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Onset Date and Time",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Severity",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Serious",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Relationship to Study Drug",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Action Taken with Study Drug",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[4].fields[6]",
+        "kind": "field",
+        "name": "Outcome",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[4].fields[7]",
+        "kind": "field",
+        "name": "Resolution Date",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[4].fields[7].skip_logic",
+        "kind": "rule",
+        "name": "Resolution Date",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[5]",
+        "kind": "form",
+        "name": "Disease Activity Assessment",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Assessment Date",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[5].fields[1]",
+        "kind": "field",
+        "name": "PASI Total Score",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Body Surface Area Involved",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Physician Global Assessment",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Patient Global Assessment",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Itch Numeric Rating Scale",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Assessment Complete",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[6]",
+        "kind": "form",
+        "name": "End of Treatment",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[6].fields[0]",
+        "kind": "field",
+        "name": "End of Treatment Date",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[6].fields[1]",
+        "kind": "field",
+        "name": "Completed Treatment as Planned",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Primary Reason for Discontinuation",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[6].fields[2].skip_logic",
+        "kind": "rule",
+        "name": "Primary Reason for Discontinuation",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Date of Last Dose",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[6].fields[4]",
+        "kind": "field",
+        "name": "Number of Doses Received",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Discontinuation Comments",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      },
+      {
+        "path": "visits[3].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Subject Withdrew Consent",
+        "status": "unreached",
+        "note": "could not open visit \"End of Treatment (Week 12)\""
+      }
+    ],
+    "durationMs": 3241,
+    "stopped": false
+  }
+}

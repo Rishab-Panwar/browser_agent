@@ -1,0 +1,16 @@
+{
+  "name": "study-builder-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A browser agent that builds a clinical study specification into an unknown eSource form designer.",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test \"test/*.test.mjs\"",
+    "verify": "npm run test && npm run build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "jsdom": "^25.0.1"
+  }
+}

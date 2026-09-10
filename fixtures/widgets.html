@@ -1,0 +1,202 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Widget equivalence fixture</title>
+<!--
+  Every block below is a PAIR: two controls that mean the same thing to a
+  clinical study, built the way two different component libraries would build
+  them. Perception must report the same capability, name and state for both
+  halves of every pair.
+
+  These are not imitations of any particular platform. They are the shapes that
+  actually differ between platforms, which is what the agent has to survive.
+-->
+
+<h1>Widget equivalence</h1>
+
+<section aria-label="toggle pair">
+  <h2>Required flag</h2>
+
+  <!-- A: native checkbox -->
+  <div>
+    <input type="checkbox" id="req-native" checked>
+    <label for="req-native">Mandatory</label>
+  </div>
+
+  <!-- B: a button that says it is a switch -->
+  <button type="button" role="switch" aria-checked="true" aria-label="Mandatory">
+    <span class="knob"></span>
+  </button>
+
+  <!-- C: a toggle button reporting through aria-pressed -->
+  <div role="button" tabindex="0" aria-pressed="false" aria-label="Hidden">Hidden</div>
+</section>
+
+<section aria-label="chooser pair">
+  <h2>Element kind</h2>
+
+  <!-- A: native select, options always in the DOM -->
+  <label for="kind-native">Element Kind</label>
+  <select id="kind-native">
+    <option value="txt">Free Text</option>
+    <option value="num" selected>Number</option>
+    <option value="pick">Pick One</option>
+  </select>
+
+  <!-- B: custom combobox, options exist ONLY while open -->
+  <div class="combo-wrap">
+    <div id="kind-combo" role="combobox" tabindex="0" aria-expanded="false"
+         aria-haspopup="listbox" aria-controls="kind-combo-list" aria-label="Element Kind">
+      <span>Number</span>
+    </div>
+    <!-- deliberately absent until opened; the script below creates it -->
+  </div>
+
+  <!-- C: a radio group holding the same three choices -->
+  <fieldset>
+    <legend>Element Kind</legend>
+    <label><input type="radio" name="kind-radio" value="txt"> Free Text</label>
+    <label><input type="radio" name="kind-radio" value="num" checked> Number</label>
+    <label><input type="radio" name="kind-radio" value="pick"> Pick One</label>
+  </fieldset>
+</section>
+
+<section aria-label="palette pair">
+  <h2>Element library</h2>
+
+  <!-- A: entries as direct siblings -->
+  <div id="palette-flat">
+    <button type="button">Free Text</button>
+    <button type="button">Number</button>
+    <button type="button">Pick One</button>
+    <button type="button">Pick Many</button>
+    <button type="button">Tick Box</button>
+  </div>
+
+  <!-- B: the same entries, each wrapped in its own list item -->
+  <ul id="palette-wrapped">
+    <li><button type="button">Free Text</button></li>
+    <li><button type="button">Number</button></li>
+    <li><button type="button">Pick One</button></li>
+    <li><button type="button">Pick Many</button></li>
+    <li><button type="button">Tick Box</button></li>
+  </ul>
+</section>
+
+<section aria-label="decoy cluster">
+  <h2>Modules</h2>
+  <!-- A small sibling cluster that is NOT a palette. A palette finder that
+       stops at the first group it can see picks this instead. -->
+  <nav id="decoy">
+    <button type="button">Participants</button>
+    <button type="button">Calendar</button>
+    <button type="button">Reports</button>
+  </nav>
+</section>
+
+<section aria-label="record list pair">
+  <h2>Visits</h2>
+
+  <!-- A: as table rows -->
+  <table id="visits-table">
+    <thead><tr><th>Visit</th><th>Window</th></tr></thead>
+    <tbody>
+      <tr><td><a href="#s">Screening</a></td><td>-28 to -1</td></tr>
+      <tr><td><a href="#b">Baseline</a></td><td>0 to 0</td></tr>
+    </tbody>
+  </table>
+
+  <!-- B: the same records as cards -->
+  <div id="visits-cards">
+    <div><h3><a href="#s2">Screening</a></h3><p>-28 to -1</p></div>
+    <div><h3><a href="#b2">Baseline</a></h3><p>0 to 0</p></div>
+  </div>
+</section>
+
+<section aria-label="commit pair">
+  <h2>Saving</h2>
+
+  <!-- A: commit control in the open, beside look-alikes that commit nothing -->
+  <div id="toolbar-open">
+    <button type="button">Preview</button>
+    <button type="button">Save As Template</button>
+    <button type="button">Save</button>
+  </div>
+
+  <!-- B: the same commit control behind an overflow disclosure -->
+  <div id="toolbar-overflow">
+    <button type="button" aria-haspopup="menu" aria-expanded="false" aria-label="More actions">…</button>
+    <!-- menu contents created on demand by the script below -->
+  </div>
+
+  <!-- A sub-edit control that reads like a commit but persists nothing -->
+  <fieldset>
+    <legend>Values</legend>
+    <button type="button">Apply Bulk Load</button>
+    <button type="button">Add Answer</button>
+  </fieldset>
+</section>
+
+<script>
+  // Custom two-state controls carry their state in ARIA and flip it themselves.
+  // An inert one would make this fixture unfair: an agent cannot be blamed for
+  // failing to set something the page never lets anybody set.
+  for (const sw of document.querySelectorAll('[role="switch"]')) {
+    sw.addEventListener('click', () => {
+      sw.setAttribute('aria-checked', sw.getAttribute('aria-checked') === 'true' ? 'false' : 'true');
+    });
+  }
+  for (const pressed of document.querySelectorAll('[aria-pressed]')) {
+    pressed.addEventListener('click', () => {
+      pressed.setAttribute('aria-pressed', pressed.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+    });
+  }
+
+  // The custom combobox renders its listbox only while open, and rebuilds it
+  // each time — the behaviour that makes a closed one unreadable and a held
+  // node reference worthless.
+  const combo = document.getElementById('kind-combo');
+  const wrap = combo.parentElement;
+  const CHOICES = ['Free Text', 'Number', 'Pick One'];
+  combo.addEventListener('click', () => {
+    const open = combo.getAttribute('aria-expanded') === 'true';
+    wrap.querySelector('[role="listbox"]')?.remove();
+    if (open) { combo.setAttribute('aria-expanded', 'false'); return; }
+    const list = document.createElement('div');
+    list.id = 'kind-combo-list';
+    list.setAttribute('role', 'listbox');
+    for (const choice of CHOICES) {
+      const option = document.createElement('div');
+      option.setAttribute('role', 'option');
+      option.setAttribute('aria-selected', String(choice === combo.firstElementChild.textContent));
+      option.textContent = choice;
+      option.addEventListener('click', () => {
+        combo.firstElementChild.textContent = choice;
+        combo.setAttribute('aria-expanded', 'false');
+        list.remove();
+      });
+      list.append(option);
+    }
+    wrap.append(list);
+    combo.setAttribute('aria-expanded', 'true');
+  });
+
+  // The overflow menu, likewise created on demand.
+  const overflow = document.querySelector('#toolbar-overflow button');
+  overflow.addEventListener('click', () => {
+    const open = overflow.getAttribute('aria-expanded') === 'true';
+    document.getElementById('overflow-menu')?.remove();
+    if (open) { overflow.setAttribute('aria-expanded', 'false'); return; }
+    const menu = document.createElement('div');
+    menu.id = 'overflow-menu';
+    menu.setAttribute('role', 'menu');
+    for (const label of ['Store Draft Locally', 'Commit Changes', 'Discard Changes']) {
+      const item = document.createElement('button');
+      item.type = 'button';
+      item.setAttribute('role', 'menuitem');
+      item.textContent = label;
+      menu.append(item);
+    }
+    overflow.parentElement.append(menu);
+    overflow.setAttribute('aria-expanded', 'true');
+  });
+</script>

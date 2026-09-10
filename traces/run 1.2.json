@@ -1,0 +1,3907 @@
+{
+  "trace": [
+    {
+      "at": 1788874689538,
+      "kind": "built",
+      "message": "visit \"Screening\"",
+      "path": ""
+    },
+    {
+      "at": 1788874689908,
+      "kind": "built",
+      "message": "visit \"Baseline (Day 1)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874690276,
+      "kind": "built",
+      "message": "visit \"Week 4\"",
+      "path": ""
+    },
+    {
+      "at": 1788874690650,
+      "kind": "built",
+      "message": "visit \"End of Treatment (Week 12)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874690955,
+      "kind": "built",
+      "message": "document \"Demographics\"",
+      "path": ""
+    },
+    {
+      "at": 1788874691211,
+      "kind": "built",
+      "message": "document \"Informed Consent\"",
+      "path": ""
+    },
+    {
+      "at": 1788874691529,
+      "kind": "built",
+      "message": "document \"Eligibility Criteria\"",
+      "path": ""
+    },
+    {
+      "at": 1788874691712,
+      "kind": "set",
+      "message": "repeating",
+      "path": ""
+    },
+    {
+      "at": 1788874691835,
+      "kind": "built",
+      "message": "document \"Medical History\"",
+      "path": ""
+    },
+    {
+      "at": 1788874692019,
+      "kind": "set",
+      "message": "repeating",
+      "path": ""
+    },
+    {
+      "at": 1788874692165,
+      "kind": "built",
+      "message": "document \"Prior and Concomitant Medications\"",
+      "path": ""
+    },
+    {
+      "at": 1788874692413,
+      "kind": "built",
+      "message": "document \"Vital Signs\"",
+      "path": ""
+    },
+    {
+      "at": 1788874692662,
+      "kind": "built",
+      "message": "document \"Local Laboratory - Hematology\"",
+      "path": ""
+    },
+    {
+      "at": 1788874692729,
+      "kind": "calibrate",
+      "message": "probing the element library",
+      "path": ""
+    },
+    {
+      "at": 1788874694535,
+      "kind": "calibrate",
+      "message": "proving which control actually saves",
+      "path": ""
+    },
+    {
+      "at": 1788874695128,
+      "kind": "calibrate",
+      "message": "\"Save\" is the control that persists",
+      "path": ""
+    },
+    {
+      "at": 1788874695128,
+      "kind": "ask",
+      "message": "This is what I worked out about this platform. Build the study with it?",
+      "path": "platform"
+    },
+    {
+      "at": 1788874737425,
+      "kind": "answered",
+      "message": "platform: accept",
+      "path": ""
+    },
+    {
+      "at": 1788874737718,
+      "kind": "added",
+      "message": "Subject Initials as \"Single Line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874737911,
+      "kind": "added",
+      "message": "Date of Birth as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874738096,
+      "kind": "added",
+      "message": "Sex at Birth as \"Radio Buttons\"",
+      "path": ""
+    },
+    {
+      "at": 1788874738804,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874738866,
+      "kind": "added",
+      "message": "Race as \"Check List\"",
+      "path": ""
+    },
+    {
+      "at": 1788874739896,
+      "kind": "values",
+      "message": "5 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874739961,
+      "kind": "added",
+      "message": "Ethnicity as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874740599,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874740662,
+      "kind": "added",
+      "message": "Height as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874741038,
+      "kind": "added",
+      "message": "Weight as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874741734,
+      "kind": "added",
+      "message": "Body Mass Index as \"Calculated Field\"",
+      "path": ""
+    },
+    {
+      "at": 1788874741922,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874742613,
+      "kind": "verify",
+      "message": "Demographics: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874742817,
+      "kind": "added",
+      "message": "Informed Consent Obtained as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874743005,
+      "kind": "added",
+      "message": "Date of Consent as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874743198,
+      "kind": "added",
+      "message": "Time of Consent as \"Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874743323,
+      "kind": "added",
+      "message": "Consent Form Version as \"Single Line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874743514,
+      "kind": "added",
+      "message": "Consented By as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874744227,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874744290,
+      "kind": "added",
+      "message": "Copy Provided to Subject as \"Checkbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874744416,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874745043,
+      "kind": "verify",
+      "message": "Informed Consent: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874745239,
+      "kind": "added",
+      "message": "Age 18 Years or Older at Consent as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874745424,
+      "kind": "added",
+      "message": "Confirmed Diagnosis of Plaque Psoriasis as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874745611,
+      "kind": "added",
+      "message": "Duration of Diagnosis as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874745925,
+      "kind": "added",
+      "message": "Written Informed Consent Provided as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874746111,
+      "kind": "added",
+      "message": "Any Exclusionary Condition Present as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874746299,
+      "kind": "added",
+      "message": "Exclusionary Conditions as \"Check List\"",
+      "path": ""
+    },
+    {
+      "at": 1788874747342,
+      "kind": "values",
+      "message": "5 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874747481,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874748050,
+      "kind": "verify",
+      "message": "Eligibility Criteria: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874748303,
+      "kind": "added",
+      "message": "Condition as \"Single Line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874748494,
+      "kind": "added",
+      "message": "Body System as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874749716,
+      "kind": "values",
+      "message": "6 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874749781,
+      "kind": "added",
+      "message": "Onset Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874749906,
+      "kind": "added",
+      "message": "Ongoing as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874750093,
+      "kind": "added",
+      "message": "Notes as \"Multi-line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874750219,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874750694,
+      "kind": "verify",
+      "message": "Medical History: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874750890,
+      "kind": "added",
+      "message": "Medication Name as \"Single Line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874751076,
+      "kind": "added",
+      "message": "Indication as \"Single Line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874751251,
+      "kind": "added",
+      "message": "Dose as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874751562,
+      "kind": "added",
+      "message": "Route as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874752586,
+      "kind": "values",
+      "message": "5 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874752653,
+      "kind": "added",
+      "message": "Frequency as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874754626,
+      "kind": "values",
+      "message": "4 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874754693,
+      "kind": "added",
+      "message": "Start Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874754880,
+      "kind": "added",
+      "message": "Ongoing as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874755066,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874755662,
+      "kind": "verify",
+      "message": "Prior and Concomitant Medications: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874755854,
+      "kind": "added",
+      "message": "Systolic Blood Pressure as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874756228,
+      "kind": "added",
+      "message": "Diastolic Blood Pressure as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874756604,
+      "kind": "added",
+      "message": "Pulse Pressure as \"Calculated Field\"",
+      "path": ""
+    },
+    {
+      "at": 1788874756790,
+      "kind": "added",
+      "message": "Heart Rate as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874757164,
+      "kind": "added",
+      "message": "Respiratory Rate as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874757478,
+      "kind": "added",
+      "message": "Body Temperature as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874757789,
+      "kind": "added",
+      "message": "Position as \"Radio Buttons\"",
+      "path": ""
+    },
+    {
+      "at": 1788874758419,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874758482,
+      "kind": "added",
+      "message": "Time of Measurement as \"Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874758670,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874759351,
+      "kind": "verify",
+      "message": "Vital Signs: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874759545,
+      "kind": "added",
+      "message": "Collection Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874759731,
+      "kind": "added",
+      "message": "Collection Time as \"Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874759855,
+      "kind": "added",
+      "message": "Hemoglobin as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874760229,
+      "kind": "added",
+      "message": "Hematocrit as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874760540,
+      "kind": "added",
+      "message": "White Blood Cell Count as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874760915,
+      "kind": "added",
+      "message": "Platelet Count as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874761287,
+      "kind": "added",
+      "message": "Sample Condition as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874762115,
+      "kind": "values",
+      "message": "4 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874762179,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874762901,
+      "kind": "verify",
+      "message": "Local Laboratory - Hematology: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874763335,
+      "kind": "built",
+      "message": "document \"Visit Status\"",
+      "path": ""
+    },
+    {
+      "at": 1788874763579,
+      "kind": "built",
+      "message": "document \"Vital Signs\"",
+      "path": ""
+    },
+    {
+      "at": 1788874763824,
+      "kind": "built",
+      "message": "document \"Physical Examination\"",
+      "path": ""
+    },
+    {
+      "at": 1788874764070,
+      "kind": "built",
+      "message": "document \"12-Lead ECG\"",
+      "path": ""
+    },
+    {
+      "at": 1788874764315,
+      "kind": "built",
+      "message": "document \"Randomization\"",
+      "path": ""
+    },
+    {
+      "at": 1788874764562,
+      "kind": "built",
+      "message": "document \"Study Drug Administration\"",
+      "path": ""
+    },
+    {
+      "at": 1788874764811,
+      "kind": "built",
+      "message": "document \"Disease Activity Assessment\"",
+      "path": ""
+    },
+    {
+      "at": 1788874764937,
+      "kind": "added",
+      "message": "Visit Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874765123,
+      "kind": "added",
+      "message": "Visit Occurred as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874765402,
+      "kind": "added",
+      "message": "Visit Type as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874766028,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874766090,
+      "kind": "added",
+      "message": "Study Day as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874766400,
+      "kind": "added",
+      "message": "Reason Visit Not Performed as \"Multi-line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874766973,
+      "kind": "added",
+      "message": "Visit Window Deviation as \"Checkbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874767163,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874767690,
+      "kind": "verify",
+      "message": "Visit Status: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874767882,
+      "kind": "added",
+      "message": "Systolic Blood Pressure as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874768253,
+      "kind": "added",
+      "message": "Diastolic Blood Pressure as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874768625,
+      "kind": "added",
+      "message": "Pulse Pressure as \"Calculated Field\"",
+      "path": ""
+    },
+    {
+      "at": 1788874768814,
+      "kind": "added",
+      "message": "Heart Rate as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874769185,
+      "kind": "added",
+      "message": "Respiratory Rate as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874769498,
+      "kind": "added",
+      "message": "Body Temperature as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874769809,
+      "kind": "added",
+      "message": "Position as \"Radio Buttons\"",
+      "path": ""
+    },
+    {
+      "at": 1788874770439,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874770503,
+      "kind": "added",
+      "message": "Time of Measurement as \"Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874770691,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874771373,
+      "kind": "verify",
+      "message": "Vital Signs: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874771565,
+      "kind": "added",
+      "message": "Examination Performed as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874771752,
+      "kind": "added",
+      "message": "Examination Date and Time as \"Date/Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874771930,
+      "kind": "added",
+      "message": "Body Systems Examined as \"Check List\"",
+      "path": ""
+    },
+    {
+      "at": 1788874773131,
+      "kind": "values",
+      "message": "6 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874773195,
+      "kind": "added",
+      "message": "General Appearance as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874773887,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874773950,
+      "kind": "added",
+      "message": "Abnormal Findings as \"Multi-line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874774077,
+      "kind": "added",
+      "message": "Subject Fasting as \"Checkbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874774332,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874774862,
+      "kind": "verify",
+      "message": "Physical Examination: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874775053,
+      "kind": "added",
+      "message": "ECG Date and Time as \"Date/Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874775238,
+      "kind": "added",
+      "message": "Ventricular Rate as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874775609,
+      "kind": "added",
+      "message": "PR Interval as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874775978,
+      "kind": "added",
+      "message": "QRS Duration as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874776288,
+      "kind": "added",
+      "message": "QT Interval as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874776600,
+      "kind": "added",
+      "message": "QTcF Interval as \"Calculated Field\"",
+      "path": ""
+    },
+    {
+      "at": 1788874776786,
+      "kind": "added",
+      "message": "Overall Interpretation as \"Radio Buttons\"",
+      "path": ""
+    },
+    {
+      "at": 1788874777506,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874777570,
+      "kind": "added",
+      "message": "Interpretation Comment as \"Multi-line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874777698,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874778379,
+      "kind": "verify",
+      "message": "12-Lead ECG: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874778584,
+      "kind": "added",
+      "message": "Randomization Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874778835,
+      "kind": "added",
+      "message": "Randomization Time as \"Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874778993,
+      "kind": "added",
+      "message": "Randomization Number as \"Single Line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874779204,
+      "kind": "added",
+      "message": "Treatment Arm Assigned as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874779955,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874780017,
+      "kind": "added",
+      "message": "Prior Biologic Use as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874780206,
+      "kind": "added",
+      "message": "Randomization Confirmed in IRT as \"Checkbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874780331,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874780857,
+      "kind": "verify",
+      "message": "Randomization: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874781048,
+      "kind": "added",
+      "message": "Study Drug Administered as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874781234,
+      "kind": "added",
+      "message": "Administration Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874781420,
+      "kind": "added",
+      "message": "Administration Time as \"Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874781545,
+      "kind": "added",
+      "message": "Dose Administered as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874781888,
+      "kind": "added",
+      "message": "Route of Administration as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874782518,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874782582,
+      "kind": "added",
+      "message": "Injection Site as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874783401,
+      "kind": "values",
+      "message": "4 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874783465,
+      "kind": "added",
+      "message": "Reason Not Administered as \"Multi-line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874783593,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874784227,
+      "kind": "verify",
+      "message": "Study Drug Administration: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874784425,
+      "kind": "added",
+      "message": "Assessment Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874784616,
+      "kind": "added",
+      "message": "PASI Total Score as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874784938,
+      "kind": "added",
+      "message": "Body Surface Area Involved as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874785252,
+      "kind": "added",
+      "message": "Physician Global Assessment as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874786332,
+      "kind": "values",
+      "message": "5 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874786396,
+      "kind": "added",
+      "message": "Patient Global Assessment as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874786651,
+      "kind": "added",
+      "message": "Itch Numeric Rating Scale as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874786903,
+      "kind": "added",
+      "message": "Assessment Complete as \"Checkbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874787029,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874787715,
+      "kind": "verify",
+      "message": "Disease Activity Assessment: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874788153,
+      "kind": "built",
+      "message": "document \"Visit Status\"",
+      "path": ""
+    },
+    {
+      "at": 1788874788398,
+      "kind": "built",
+      "message": "document \"Vital Signs\"",
+      "path": ""
+    },
+    {
+      "at": 1788874810062,
+      "kind": "built",
+      "message": "document \"Study Drug Administration\"",
+      "path": ""
+    },
+    {
+      "at": 1788874810330,
+      "kind": "built",
+      "message": "document \"Disease Activity Assessment\"",
+      "path": ""
+    },
+    {
+      "at": 1788874810529,
+      "kind": "set",
+      "message": "repeating",
+      "path": ""
+    },
+    {
+      "at": 1788874810661,
+      "kind": "built",
+      "message": "document \"Adverse Events\"",
+      "path": ""
+    },
+    {
+      "at": 1788874810860,
+      "kind": "set",
+      "message": "repeating",
+      "path": ""
+    },
+    {
+      "at": 1788874811002,
+      "kind": "built",
+      "message": "document \"Concomitant Medications\"",
+      "path": ""
+    },
+    {
+      "at": 1788874811284,
+      "kind": "built",
+      "message": "document \"Local Laboratory - Chemistry\"",
+      "path": ""
+    },
+    {
+      "at": 1788874811433,
+      "kind": "added",
+      "message": "Visit Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874811637,
+      "kind": "added",
+      "message": "Visit Occurred as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874811852,
+      "kind": "added",
+      "message": "Visit Type as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874812569,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874812642,
+      "kind": "added",
+      "message": "Study Day as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874813001,
+      "kind": "added",
+      "message": "Reason Visit Not Performed as \"Multi-line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874813142,
+      "kind": "added",
+      "message": "Visit Window Deviation as \"Checkbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874813371,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874814082,
+      "kind": "verify",
+      "message": "Visit Status: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874814326,
+      "kind": "added",
+      "message": "Systolic Blood Pressure as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874814728,
+      "kind": "added",
+      "message": "Diastolic Blood Pressure as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874815134,
+      "kind": "added",
+      "message": "Pulse Pressure as \"Calculated Field\"",
+      "path": ""
+    },
+    {
+      "at": 1788874815342,
+      "kind": "added",
+      "message": "Heart Rate as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874815761,
+      "kind": "added",
+      "message": "Respiratory Rate as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874816103,
+      "kind": "added",
+      "message": "Body Temperature as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874816449,
+      "kind": "added",
+      "message": "Position as \"Radio Buttons\"",
+      "path": ""
+    },
+    {
+      "at": 1788874817184,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874817256,
+      "kind": "added",
+      "message": "Time of Measurement as \"Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874817469,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874818451,
+      "kind": "verify",
+      "message": "Vital Signs: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874818686,
+      "kind": "added",
+      "message": "Study Drug Administered as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874818881,
+      "kind": "added",
+      "message": "Administration Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874819085,
+      "kind": "added",
+      "message": "Administration Time as \"Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874819227,
+      "kind": "added",
+      "message": "Dose Administered as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874819573,
+      "kind": "added",
+      "message": "Route of Administration as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874820318,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874820388,
+      "kind": "added",
+      "message": "Injection Site as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874821336,
+      "kind": "values",
+      "message": "4 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874821406,
+      "kind": "added",
+      "message": "Reason Not Administered as \"Multi-line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874821558,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874822350,
+      "kind": "verify",
+      "message": "Study Drug Administration: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874822591,
+      "kind": "added",
+      "message": "Assessment Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874822788,
+      "kind": "added",
+      "message": "PASI Total Score as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874823128,
+      "kind": "added",
+      "message": "Body Surface Area Involved as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874823471,
+      "kind": "added",
+      "message": "Physician Global Assessment as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874824717,
+      "kind": "values",
+      "message": "5 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874824788,
+      "kind": "added",
+      "message": "Patient Global Assessment as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874825066,
+      "kind": "added",
+      "message": "Itch Numeric Rating Scale as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874825345,
+      "kind": "added",
+      "message": "Assessment Complete as \"Checkbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874825486,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874826343,
+      "kind": "verify",
+      "message": "Disease Activity Assessment: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874826573,
+      "kind": "added",
+      "message": "Adverse Event Term as \"Single Line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874826773,
+      "kind": "added",
+      "message": "Onset Date and Time as \"Date/Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874826980,
+      "kind": "added",
+      "message": "Severity as \"Radio Buttons\"",
+      "path": ""
+    },
+    {
+      "at": 1788874827764,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874827835,
+      "kind": "added",
+      "message": "Serious as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874828044,
+      "kind": "added",
+      "message": "Relationship to Study Drug as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874828853,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874828923,
+      "kind": "added",
+      "message": "Action Taken with Study Drug as \"Check List\"",
+      "path": ""
+    },
+    {
+      "at": 1788874829893,
+      "kind": "values",
+      "message": "4 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874829967,
+      "kind": "added",
+      "message": "Outcome as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874831456,
+      "kind": "values",
+      "message": "5 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874831528,
+      "kind": "added",
+      "message": "Resolution Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874831687,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874836714,
+      "kind": "verify",
+      "message": "Adverse Events: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874836952,
+      "kind": "added",
+      "message": "Medication Name as \"Single Line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874837152,
+      "kind": "added",
+      "message": "Indication as \"Single Line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874837292,
+      "kind": "added",
+      "message": "Dose as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874837637,
+      "kind": "added",
+      "message": "Route as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874838815,
+      "kind": "values",
+      "message": "5 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874838885,
+      "kind": "added",
+      "message": "Frequency as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874839849,
+      "kind": "values",
+      "message": "4 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874839924,
+      "kind": "added",
+      "message": "Start Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874840136,
+      "kind": "added",
+      "message": "Ongoing as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874840345,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874841166,
+      "kind": "verify",
+      "message": "Concomitant Medications: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874841408,
+      "kind": "added",
+      "message": "Collection Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874841629,
+      "kind": "added",
+      "message": "Collection Time as \"Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874841767,
+      "kind": "added",
+      "message": "Alanine Aminotransferase as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874842183,
+      "kind": "added",
+      "message": "Aspartate Aminotransferase as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874842596,
+      "kind": "added",
+      "message": "Total Bilirubin as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874842951,
+      "kind": "added",
+      "message": "Creatinine as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874843307,
+      "kind": "added",
+      "message": "Fasting Status as \"Radio Buttons\"",
+      "path": ""
+    },
+    {
+      "at": 1788874844051,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874844144,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874845042,
+      "kind": "verify",
+      "message": "Local Laboratory - Chemistry: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874845540,
+      "kind": "built",
+      "message": "document \"Visit Status\"",
+      "path": ""
+    },
+    {
+      "at": 1788874845798,
+      "kind": "built",
+      "message": "document \"Vital Signs\"",
+      "path": ""
+    },
+    {
+      "at": 1788874846064,
+      "kind": "built",
+      "message": "document \"Physical Examination\"",
+      "path": ""
+    },
+    {
+      "at": 1788874846329,
+      "kind": "built",
+      "message": "document \"12-Lead ECG\"",
+      "path": ""
+    },
+    {
+      "at": 1788874846531,
+      "kind": "set",
+      "message": "repeating",
+      "path": ""
+    },
+    {
+      "at": 1788874846664,
+      "kind": "built",
+      "message": "document \"Adverse Events\"",
+      "path": ""
+    },
+    {
+      "at": 1788874846940,
+      "kind": "built",
+      "message": "document \"Disease Activity Assessment\"",
+      "path": ""
+    },
+    {
+      "at": 1788874847224,
+      "kind": "built",
+      "message": "document \"End of Treatment\"",
+      "path": ""
+    },
+    {
+      "at": 1788874847372,
+      "kind": "added",
+      "message": "Visit Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874847579,
+      "kind": "added",
+      "message": "Visit Occurred as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874847786,
+      "kind": "added",
+      "message": "Visit Type as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874848538,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874848609,
+      "kind": "added",
+      "message": "Study Day as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874848967,
+      "kind": "added",
+      "message": "Reason Visit Not Performed as \"Multi-line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874849113,
+      "kind": "added",
+      "message": "Visit Window Deviation as \"Checkbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874849676,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874850385,
+      "kind": "verify",
+      "message": "Visit Status: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874852841,
+      "kind": "added",
+      "message": "Systolic Blood Pressure as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874877951,
+      "kind": "added",
+      "message": "Diastolic Blood Pressure as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874878333,
+      "kind": "added",
+      "message": "Pulse Pressure as \"Calculated Field\"",
+      "path": ""
+    },
+    {
+      "at": 1788874878521,
+      "kind": "added",
+      "message": "Heart Rate as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874878913,
+      "kind": "added",
+      "message": "Respiratory Rate as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874879224,
+      "kind": "added",
+      "message": "Body Temperature as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874879537,
+      "kind": "added",
+      "message": "Position as \"Radio Buttons\"",
+      "path": ""
+    },
+    {
+      "at": 1788874880174,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874880238,
+      "kind": "added",
+      "message": "Time of Measurement as \"Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874880431,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874881109,
+      "kind": "verify",
+      "message": "Vital Signs: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874881303,
+      "kind": "added",
+      "message": "Examination Performed as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874881492,
+      "kind": "added",
+      "message": "Examination Date and Time as \"Date/Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874881617,
+      "kind": "added",
+      "message": "Body Systems Examined as \"Check List\"",
+      "path": ""
+    },
+    {
+      "at": 1788874903150,
+      "kind": "values",
+      "message": "6 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874903225,
+      "kind": "added",
+      "message": "General Appearance as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874904052,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874904124,
+      "kind": "added",
+      "message": "Abnormal Findings as \"Multi-line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874904273,
+      "kind": "added",
+      "message": "Subject Fasting as \"Checkbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874904602,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874905339,
+      "kind": "verify",
+      "message": "Physical Examination: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874905573,
+      "kind": "added",
+      "message": "ECG Date and Time as \"Date/Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874905775,
+      "kind": "added",
+      "message": "Ventricular Rate as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874906187,
+      "kind": "added",
+      "message": "PR Interval as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874906531,
+      "kind": "added",
+      "message": "QRS Duration as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874906879,
+      "kind": "added",
+      "message": "QT Interval as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874907243,
+      "kind": "added",
+      "message": "QTcF Interval as \"Calculated Field\"",
+      "path": ""
+    },
+    {
+      "at": 1788874907455,
+      "kind": "added",
+      "message": "Overall Interpretation as \"Radio Buttons\"",
+      "path": ""
+    },
+    {
+      "at": 1788874908252,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874908326,
+      "kind": "added",
+      "message": "Interpretation Comment as \"Multi-line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874908476,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874909436,
+      "kind": "verify",
+      "message": "12-Lead ECG: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874909672,
+      "kind": "added",
+      "message": "Adverse Event Term as \"Single Line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874909873,
+      "kind": "added",
+      "message": "Onset Date and Time as \"Date/Time\"",
+      "path": ""
+    },
+    {
+      "at": 1788874910077,
+      "kind": "added",
+      "message": "Severity as \"Radio Buttons\"",
+      "path": ""
+    },
+    {
+      "at": 1788874910861,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874910930,
+      "kind": "added",
+      "message": "Serious as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874911136,
+      "kind": "added",
+      "message": "Relationship to Study Drug as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874911936,
+      "kind": "values",
+      "message": "3 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874912006,
+      "kind": "added",
+      "message": "Action Taken with Study Drug as \"Check List\"",
+      "path": ""
+    },
+    {
+      "at": 1788874912999,
+      "kind": "values",
+      "message": "4 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874913072,
+      "kind": "added",
+      "message": "Outcome as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874914535,
+      "kind": "values",
+      "message": "5 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874914608,
+      "kind": "added",
+      "message": "Resolution Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874914765,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874915743,
+      "kind": "verify",
+      "message": "Adverse Events: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874915977,
+      "kind": "added",
+      "message": "Assessment Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874916175,
+      "kind": "added",
+      "message": "PASI Total Score as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874916511,
+      "kind": "added",
+      "message": "Body Surface Area Involved as \"Number (Decimal)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874916856,
+      "kind": "added",
+      "message": "Physician Global Assessment as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874918081,
+      "kind": "values",
+      "message": "5 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874918153,
+      "kind": "added",
+      "message": "Patient Global Assessment as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874918431,
+      "kind": "added",
+      "message": "Itch Numeric Rating Scale as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874918709,
+      "kind": "added",
+      "message": "Assessment Complete as \"Checkbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874918853,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874919693,
+      "kind": "verify",
+      "message": "Disease Activity Assessment: read back",
+      "path": ""
+    },
+    {
+      "at": 1788874920143,
+      "kind": "added",
+      "message": "End of Treatment Date as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874920344,
+      "kind": "added",
+      "message": "Completed Treatment as Planned as \"Yes/No Toggle\"",
+      "path": ""
+    },
+    {
+      "at": 1788874920548,
+      "kind": "added",
+      "message": "Primary Reason for Discontinuation as \"Dropdown\"",
+      "path": ""
+    },
+    {
+      "at": 1788874921963,
+      "kind": "values",
+      "message": "6 coded value(s) entered row by row",
+      "path": ""
+    },
+    {
+      "at": 1788874922043,
+      "kind": "added",
+      "message": "Date of Last Dose as \"Date\"",
+      "path": ""
+    },
+    {
+      "at": 1788874922183,
+      "kind": "added",
+      "message": "Number of Doses Received as \"Number (Whole)\"",
+      "path": ""
+    },
+    {
+      "at": 1788874922464,
+      "kind": "added",
+      "message": "Discontinuation Comments as \"Multi-line Textbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874922607,
+      "kind": "added",
+      "message": "Subject Withdrew Consent as \"Checkbox\"",
+      "path": ""
+    },
+    {
+      "at": 1788874922853,
+      "kind": "commit",
+      "message": "pressed \"Save\"",
+      "path": ""
+    },
+    {
+      "at": 1788874923652,
+      "kind": "verify",
+      "message": "End of Treatment: read back",
+      "path": ""
+    }
+  ],
+  "report": {
+    "counts": {
+      "built": 227,
+      "escalated": 13,
+      "unreached": 0,
+      "plan": 240,
+      "unaccounted": 0
+    },
+    "warnings": [],
+    "platform": {
+      "types": {
+        "decimal": {
+          "entry": "Number (Decimal)",
+          "describe": {
+            "cap": "action",
+            "name": "Number (Decimal)",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.6666666666666666,
+          "evidence": [
+            "a range with decimal precision"
+          ]
+        },
+        "boolean": {
+          "entry": "Yes/No Toggle",
+          "describe": {
+            "cap": "action",
+            "name": "Yes/No Toggle",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.92,
+          "evidence": [
+            "the field renders yes/no controls"
+          ]
+        },
+        "integer": {
+          "entry": "Number (Whole)",
+          "describe": {
+            "cap": "action",
+            "name": "Number (Whole)",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.4166666666666667,
+          "evidence": [
+            "a range with no decimal precision"
+          ]
+        },
+        "date": {
+          "entry": "Date",
+          "describe": {
+            "cap": "action",
+            "name": "Date",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.9047619047619048,
+          "evidence": [
+            "a date input"
+          ]
+        },
+        "time": {
+          "entry": "Time",
+          "describe": {
+            "cap": "action",
+            "name": "Time",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.9047619047619048,
+          "evidence": [
+            "a time input"
+          ]
+        },
+        "calculated": {
+          "entry": "Calculated Field",
+          "describe": {
+            "cap": "action",
+            "name": "Calculated Field",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.8947368421052632,
+          "evidence": [
+            "a formula box appeared"
+          ]
+        },
+        "single_select": {
+          "entry": "Dropdown",
+          "describe": {
+            "cap": "action",
+            "name": "Dropdown",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.3684210526315789,
+          "evidence": [
+            "a coded values editor appeared",
+            "the field renders a chooser"
+          ]
+        },
+        "datetime": {
+          "entry": "Date/Time",
+          "describe": {
+            "cap": "action",
+            "name": "Date/Time",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.7222222222222222,
+          "evidence": [
+            "a date-and-time input"
+          ]
+        },
+        "radio": {
+          "entry": "Radio Buttons",
+          "describe": {
+            "cap": "action",
+            "name": "Radio Buttons",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.3333333333333333,
+          "evidence": [
+            "a coded values editor appeared"
+          ]
+        },
+        "textarea": {
+          "entry": "Multi-line Textbox",
+          "describe": {
+            "cap": "action",
+            "name": "Multi-line Textbox",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.5294117647058824,
+          "evidence": [
+            "the field renders as multi-line text"
+          ]
+        },
+        "checkbox": {
+          "entry": "Checkbox",
+          "describe": {
+            "cap": "action",
+            "name": "Checkbox",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.8666666666666667,
+          "evidence": [
+            "the field renders a single tick"
+          ]
+        },
+        "multi_select": {
+          "entry": "Check List",
+          "describe": {
+            "cap": "action",
+            "name": "Check List",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.2,
+          "evidence": [
+            "a coded values editor appeared"
+          ]
+        },
+        "text": {
+          "entry": "Single Line Textbox",
+          "describe": {
+            "cap": "action",
+            "name": "Single Line Textbox",
+            "context": [
+              "Elements"
+            ],
+            "nth": -1
+          },
+          "confidence": 0.75,
+          "evidence": []
+        }
+      },
+      "commit": "Save"
+    },
+    "items": [
+      {
+        "path": "visits[0]",
+        "kind": "visit",
+        "name": "Screening",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0]",
+        "kind": "form",
+        "name": "Demographics",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Subject Initials",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Date of Birth",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Sex at Birth",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Race",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Ethnicity",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Height",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0].fields[6]",
+        "kind": "field",
+        "name": "Weight",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[0].fields[7]",
+        "kind": "field",
+        "name": "Body Mass Index",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1]",
+        "kind": "form",
+        "name": "Informed Consent",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Informed Consent Obtained",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Date of Consent",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Time of Consent",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Consent Form Version",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Consented By",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Copy Provided to Subject",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2]",
+        "kind": "form",
+        "name": "Eligibility Criteria",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Age 18 Years or Older at Consent",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Confirmed Diagnosis of Plaque Psoriasis",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Duration of Diagnosis",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[3]",
+        "kind": "field",
+        "name": "Written Informed Consent Provided",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Any Exclusionary Condition Present",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Exclusionary Conditions",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[2].fields[5].skip_logic",
+        "kind": "rule",
+        "name": "Exclusionary Conditions",
+        "status": "escalated",
+        "note": "the visibility control offers no conditional mode"
+      },
+      {
+        "path": "visits[0].forms[3]",
+        "kind": "form",
+        "name": "Medical History",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3].fields[0]",
+        "kind": "field",
+        "name": "Condition",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3].fields[1]",
+        "kind": "field",
+        "name": "Body System",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3].fields[2]",
+        "kind": "field",
+        "name": "Onset Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3].fields[3]",
+        "kind": "field",
+        "name": "Ongoing",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[3].fields[4]",
+        "kind": "field",
+        "name": "Notes",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4]",
+        "kind": "form",
+        "name": "Prior and Concomitant Medications",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Medication Name",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Indication",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Dose",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Route",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Frequency",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Start Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[4].fields[6]",
+        "kind": "field",
+        "name": "Ongoing",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[5].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6]",
+        "kind": "form",
+        "name": "Local Laboratory - Hematology",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[0]",
+        "kind": "field",
+        "name": "Collection Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[1]",
+        "kind": "field",
+        "name": "Collection Time",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Hemoglobin",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Hematocrit",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[4]",
+        "kind": "field",
+        "name": "White Blood Cell Count",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Platelet Count",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[0].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Sample Condition",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1]",
+        "kind": "visit",
+        "name": "Baseline (Day 1)",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0]",
+        "kind": "form",
+        "name": "Visit Status",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Visit Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Visit Occurred",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Visit Type",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Study Day",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Reason Visit Not Performed",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[0].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Reason Visit Not Performed",
+        "status": "escalated",
+        "note": "the visibility control offers no conditional mode"
+      },
+      {
+        "path": "visits[1].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Visit Window Deviation",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[1].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2]",
+        "kind": "form",
+        "name": "Physical Examination",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Examination Performed",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Examination Date and Time",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[1].skip_logic",
+        "kind": "rule",
+        "name": "Examination Date and Time",
+        "status": "escalated",
+        "note": "the visibility control offers no conditional mode"
+      },
+      {
+        "path": "visits[1].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Body Systems Examined",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[3]",
+        "kind": "field",
+        "name": "General Appearance",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Abnormal Findings",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[2].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Abnormal Findings",
+        "status": "escalated",
+        "note": "the visibility control offers no conditional mode"
+      },
+      {
+        "path": "visits[1].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Subject Fasting",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3]",
+        "kind": "form",
+        "name": "12-Lead ECG",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[0]",
+        "kind": "field",
+        "name": "ECG Date and Time",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[1]",
+        "kind": "field",
+        "name": "Ventricular Rate",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[2]",
+        "kind": "field",
+        "name": "PR Interval",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[3]",
+        "kind": "field",
+        "name": "QRS Duration",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[4]",
+        "kind": "field",
+        "name": "QT Interval",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[5]",
+        "kind": "field",
+        "name": "QTcF Interval",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[6]",
+        "kind": "field",
+        "name": "Overall Interpretation",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[3].fields[7]",
+        "kind": "field",
+        "name": "Interpretation Comment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4]",
+        "kind": "form",
+        "name": "Randomization",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Randomization Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Randomization Time",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Randomization Number",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Treatment Arm Assigned",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Prior Biologic Use",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Randomization Confirmed in IRT",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5]",
+        "kind": "form",
+        "name": "Study Drug Administration",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Study Drug Administered",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[1]",
+        "kind": "field",
+        "name": "Administration Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Administration Time",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Dose Administered",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Route of Administration",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Injection Site",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Reason Not Administered",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[5].fields[6].skip_logic",
+        "kind": "rule",
+        "name": "Reason Not Administered",
+        "status": "escalated",
+        "note": "could not select the field to give it a rule"
+      },
+      {
+        "path": "visits[1].forms[6]",
+        "kind": "form",
+        "name": "Disease Activity Assessment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[0]",
+        "kind": "field",
+        "name": "Assessment Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[1]",
+        "kind": "field",
+        "name": "PASI Total Score",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Body Surface Area Involved",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Physician Global Assessment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[4]",
+        "kind": "field",
+        "name": "Patient Global Assessment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Itch Numeric Rating Scale",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[1].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Assessment Complete",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2]",
+        "kind": "visit",
+        "name": "Week 4",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0]",
+        "kind": "form",
+        "name": "Visit Status",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Visit Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Visit Occurred",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Visit Type",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Study Day",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Reason Visit Not Performed",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[0].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Reason Visit Not Performed",
+        "status": "escalated",
+        "note": "the visibility control offers no conditional mode"
+      },
+      {
+        "path": "visits[2].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Visit Window Deviation",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[1].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2]",
+        "kind": "form",
+        "name": "Study Drug Administration",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Study Drug Administered",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Administration Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Administration Time",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[3]",
+        "kind": "field",
+        "name": "Dose Administered",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Route of Administration",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Injection Site",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[6]",
+        "kind": "field",
+        "name": "Reason Not Administered",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[2].fields[6].skip_logic",
+        "kind": "rule",
+        "name": "Reason Not Administered",
+        "status": "escalated",
+        "note": "could not select the field to give it a rule"
+      },
+      {
+        "path": "visits[2].forms[3]",
+        "kind": "form",
+        "name": "Disease Activity Assessment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[0]",
+        "kind": "field",
+        "name": "Assessment Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[1]",
+        "kind": "field",
+        "name": "PASI Total Score",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[2]",
+        "kind": "field",
+        "name": "Body Surface Area Involved",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[3]",
+        "kind": "field",
+        "name": "Physician Global Assessment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[4]",
+        "kind": "field",
+        "name": "Patient Global Assessment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[5]",
+        "kind": "field",
+        "name": "Itch Numeric Rating Scale",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[3].fields[6]",
+        "kind": "field",
+        "name": "Assessment Complete",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4]",
+        "kind": "form",
+        "name": "Adverse Events",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Adverse Event Term",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Onset Date and Time",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Severity",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Serious",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Relationship to Study Drug",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Action Taken with Study Drug",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[6]",
+        "kind": "field",
+        "name": "Outcome",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[7]",
+        "kind": "field",
+        "name": "Resolution Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[4].fields[7].skip_logic",
+        "kind": "rule",
+        "name": "Resolution Date",
+        "status": "escalated",
+        "note": "could not select the field to give it a rule"
+      },
+      {
+        "path": "visits[2].forms[5]",
+        "kind": "form",
+        "name": "Concomitant Medications",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Medication Name",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[1]",
+        "kind": "field",
+        "name": "Indication",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Dose",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Route",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Frequency",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Start Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Ongoing",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6]",
+        "kind": "form",
+        "name": "Local Laboratory - Chemistry",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[0]",
+        "kind": "field",
+        "name": "Collection Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[1]",
+        "kind": "field",
+        "name": "Collection Time",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Alanine Aminotransferase",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Aspartate Aminotransferase",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[4]",
+        "kind": "field",
+        "name": "Total Bilirubin",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Creatinine",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[2].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Fasting Status",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3]",
+        "kind": "visit",
+        "name": "End of Treatment (Week 12)",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0]",
+        "kind": "form",
+        "name": "Visit Status",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[0]",
+        "kind": "field",
+        "name": "Visit Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[1]",
+        "kind": "field",
+        "name": "Visit Occurred",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[2]",
+        "kind": "field",
+        "name": "Visit Type",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[3]",
+        "kind": "field",
+        "name": "Study Day",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[4]",
+        "kind": "field",
+        "name": "Reason Visit Not Performed",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[0].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Reason Visit Not Performed",
+        "status": "escalated",
+        "note": "the visibility control offers no conditional mode"
+      },
+      {
+        "path": "visits[3].forms[0].fields[5]",
+        "kind": "field",
+        "name": "Visit Window Deviation",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1]",
+        "kind": "form",
+        "name": "Vital Signs",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[0]",
+        "kind": "field",
+        "name": "Systolic Blood Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[1]",
+        "kind": "field",
+        "name": "Diastolic Blood Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[2]",
+        "kind": "field",
+        "name": "Pulse Pressure",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[3]",
+        "kind": "field",
+        "name": "Heart Rate",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[4]",
+        "kind": "field",
+        "name": "Respiratory Rate",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[5]",
+        "kind": "field",
+        "name": "Body Temperature",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[6]",
+        "kind": "field",
+        "name": "Position",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[1].fields[7]",
+        "kind": "field",
+        "name": "Time of Measurement",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2]",
+        "kind": "form",
+        "name": "Physical Examination",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[0]",
+        "kind": "field",
+        "name": "Examination Performed",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[1]",
+        "kind": "field",
+        "name": "Examination Date and Time",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[1].skip_logic",
+        "kind": "rule",
+        "name": "Examination Date and Time",
+        "status": "escalated",
+        "note": "the visibility control offers no conditional mode"
+      },
+      {
+        "path": "visits[3].forms[2].fields[2]",
+        "kind": "field",
+        "name": "Body Systems Examined",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[3]",
+        "kind": "field",
+        "name": "General Appearance",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[4]",
+        "kind": "field",
+        "name": "Abnormal Findings",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[2].fields[4].skip_logic",
+        "kind": "rule",
+        "name": "Abnormal Findings",
+        "status": "escalated",
+        "note": "the visibility control offers no conditional mode"
+      },
+      {
+        "path": "visits[3].forms[2].fields[5]",
+        "kind": "field",
+        "name": "Subject Fasting",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3]",
+        "kind": "form",
+        "name": "12-Lead ECG",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[0]",
+        "kind": "field",
+        "name": "ECG Date and Time",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[1]",
+        "kind": "field",
+        "name": "Ventricular Rate",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[2]",
+        "kind": "field",
+        "name": "PR Interval",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[3]",
+        "kind": "field",
+        "name": "QRS Duration",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[4]",
+        "kind": "field",
+        "name": "QT Interval",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[5]",
+        "kind": "field",
+        "name": "QTcF Interval",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[6]",
+        "kind": "field",
+        "name": "Overall Interpretation",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[3].fields[7]",
+        "kind": "field",
+        "name": "Interpretation Comment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4]",
+        "kind": "form",
+        "name": "Adverse Events",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[0]",
+        "kind": "field",
+        "name": "Adverse Event Term",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[1]",
+        "kind": "field",
+        "name": "Onset Date and Time",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[2]",
+        "kind": "field",
+        "name": "Severity",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[3]",
+        "kind": "field",
+        "name": "Serious",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[4]",
+        "kind": "field",
+        "name": "Relationship to Study Drug",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[5]",
+        "kind": "field",
+        "name": "Action Taken with Study Drug",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[6]",
+        "kind": "field",
+        "name": "Outcome",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[7]",
+        "kind": "field",
+        "name": "Resolution Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[4].fields[7].skip_logic",
+        "kind": "rule",
+        "name": "Resolution Date",
+        "status": "escalated",
+        "note": "could not select the field to give it a rule"
+      },
+      {
+        "path": "visits[3].forms[5]",
+        "kind": "form",
+        "name": "Disease Activity Assessment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[0]",
+        "kind": "field",
+        "name": "Assessment Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[1]",
+        "kind": "field",
+        "name": "PASI Total Score",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[2]",
+        "kind": "field",
+        "name": "Body Surface Area Involved",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[3]",
+        "kind": "field",
+        "name": "Physician Global Assessment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[4]",
+        "kind": "field",
+        "name": "Patient Global Assessment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[5]",
+        "kind": "field",
+        "name": "Itch Numeric Rating Scale",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[5].fields[6]",
+        "kind": "field",
+        "name": "Assessment Complete",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6]",
+        "kind": "form",
+        "name": "End of Treatment",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[0]",
+        "kind": "field",
+        "name": "End of Treatment Date",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[1]",
+        "kind": "field",
+        "name": "Completed Treatment as Planned",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[2]",
+        "kind": "field",
+        "name": "Primary Reason for Discontinuation",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[2].skip_logic",
+        "kind": "rule",
+        "name": "Primary Reason for Discontinuation",
+        "status": "escalated",
+        "note": "the visibility control offers no conditional mode"
+      },
+      {
+        "path": "visits[3].forms[6].fields[3]",
+        "kind": "field",
+        "name": "Date of Last Dose",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[4]",
+        "kind": "field",
+        "name": "Number of Doses Received",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[5]",
+        "kind": "field",
+        "name": "Discontinuation Comments",
+        "status": "built",
+        "note": ""
+      },
+      {
+        "path": "visits[3].forms[6].fields[6]",
+        "kind": "field",
+        "name": "Subject Withdrew Consent",
+        "status": "built",
+        "note": ""
+      }
+    ],
+    "durationMs": 234596,
+    "stopped": false
+  }
+}

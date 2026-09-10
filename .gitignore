@@ -1,0 +1,4 @@
+node_modules
+# Build output. `npm run build` regenerates it in well under a second, and a
+# committed bundle drifts from the source it claims to be.
+dist
