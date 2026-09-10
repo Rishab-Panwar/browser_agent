@@ -87,7 +87,7 @@ The dotted line is the point: the differ reads the **platform's** saved state, n
 
 ## Type Mapping
 
-The same canonical type is called something different on every platform:
+The same canonical type is called something different on every platform. **This table is what the agent worked out, not what it was told** — none of these names appears anywhere in `src/`:
 
 | canonical | Mock A | Designer B | Designer C | Meridian |
 |---|---|---|---|---|
@@ -95,7 +95,19 @@ The same canonical type is called something different on every platform:
 | `decimal` | Number (Decimal) | Measurement | Number (Precise) | Exact Amount |
 | `checkbox` | Checkbox | Single Tick | Tick Box | Confirmation Mark |
 
-String matching cannot survive that, so the agent **runs an experiment**: on entering a designer it presses every library entry once and records what *appeared* — a coded-values editor? a min and max? a precision box? what does the field render as? Names only break ties between entries the platform treats identically. Probes are removed before any real field is built. The margin between the top two candidates is a **confidence score**; below 0.6 it goes to the gate.
+String matching cannot survive that, so the agent **runs an experiment**: on entering a designer it presses every library entry once and records what *appeared* — a coded-values editor? a min and max? a precision box? what does the field render as? Probes are removed before any real field is built. The margin between the top two candidates is a **confidence score**; below 0.6 it goes to the gate.
+
+Behaviour decides, and it outweighs wording by four to one:
+
+```js
+if (f.formula)   bump(['calculated'], 8);   // a formula box appeared
+if (f.yesNo)     bump(['boolean'],    7);   // it renders yes/no controls
+if (f.multiline) bump(['textarea'],   6);   // it renders multi-line text
+…
+for (const hint of hints) if (lowered.includes(hint)) s[type] += 1.5;   // a tie-break, no more
+```
+
+The word lists are ordinary English — `integer: ['integer','whole','count','tally','number']` — so `tally` fits "Tally Counter" for the same reason `whole` fits "Whole Amount": they are what people call whole numbers. Nothing is keyed to a product. The evidence that this is real: Meridian scored **32/240 on first contact**. A hardcoded table would have given 240 at once, or 0 forever.
 
 Two details that cost whole runs: diffs are by **semantic signature, not element identity** (a page that rebuilds itself would otherwise report the whole screen as new), and a **properties panel is not a preview** (a panel headed "Options" would make every field look like it has coded values).
 
