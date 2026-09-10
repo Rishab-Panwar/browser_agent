@@ -473,7 +473,7 @@ async function verifyForm(doc, { form, formPath, ledger, log }) {
     if (differences.length) {
       ledger.escalated(path, differences.map((x) => `${x.part}: wanted ${JSON.stringify(x.wanted)}, found ${JSON.stringify(x.found)}`).join('; '));
     } else if (unread.length) {
-      ledger.escalated(path, `present, but this designer will not show ${unread.join(', ')} — unverified`);
+      ledger.escalated(path, `present, but this designer will not show ${unread.join(', ')}: unverified`);
     } else {
       ledger.built(path);
     }
