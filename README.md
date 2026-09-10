@@ -156,12 +156,28 @@ Meridian now passes, so it is a **regression test, not evidence** — a benchmar
 tuned until it passes proves nothing. The evidence is the three platforms this
 project did not write.
 
-| Platform | Written by | Ledger | Differ |
+| Platform | Written by | Ledger (headless) | Differ |
 |---|---|---|---|
 | the assignment's eSource mock | the assignment | 240 built · 0 escalated | **0 differences** |
 | a second study designer | not this project | 240 built · 0 escalated | **0 differences** |
 | a third study designer | not this project | 240 built · 0 escalated | **0 differences** |
 | Meridian Clinical | this project | 240 built · 0 escalated | **0 differences** |
+
+**Those are headless numbers, and headless is more forgiving than a browser.**
+`test/surfaces.mjs` runs the agent in jsdom, which has no layout, so it stubs
+`getBoundingClientRect` to return a fixed non-empty box — and `isVisible`
+asks exactly that question. Every control therefore looks visible, including
+ones a real browser would never show.
+
+Run in Chrome against the same second designer, the same specification gives
+**204 built · 36 escalated · 0 unreached · 0 unaccounted**: the min, max and
+unit controls of 36 numeric fields could not be found, and each was escalated
+rather than claimed. The ledger still reconciles — nothing was lost and nothing
+was invented — but the study is 36 items short of complete, and the headless
+harness cannot see that class of failure at all.
+
+Both numbers are here because either one alone misleads. The headless run is
+what a change can be checked against in minutes; the browser is what is true.
 
 ```bash
 npm test                                     # 80 unit tests (jsdom), ~4s
@@ -196,6 +212,11 @@ calls it — reading the answer key answers a different question.
   behaviour, not a bug.
 - **It cannot do what a platform cannot.** One designer has no formula editor, so
   7 calculated fields were escalated rather than claimed.
+- **A control the browser lays out differently.** The second designer keeps a
+  numeric field's min, max and unit behind something a real Chrome does not
+  show where jsdom does, so 36 fields were escalated in the browser and none
+  headless. Escalating is the right answer to not finding a control; not
+  finding it is the bug, and the headless harness cannot see it.
 - **Not yet exercised:** drag-and-drop designers, paginated canvases.
 
 When it breaks it escalates with the evidence and the ledger stops reconciling.
