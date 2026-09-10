@@ -4,10 +4,11 @@ A Chrome extension that reads a study specification and builds it into whatever
 eSource form designer is open in the tab, with no prior knowledge of that
 platform.
 
-Run against **four** independent eSource platforms, only one of which it was
-written for, it builds ABC-101 completely on every one of them: 4 visits,
-28 forms, 195 fields, 13 display rules — checked field by field by a differ
-that does not trust the agent.
+Run against **four** independent eSource platforms — the assignment's own mock
+and three others, only one of which this project wrote — it builds ABC-101
+completely on every one of them: 4 visits, 28 forms, 195 fields, 13 display
+rules, checked field by field by a differ that reads the platform's saved state
+rather than the agent's account of itself.
 
 The number that matters more: on **first contact** with the fourth platform it
 managed **32 of 240**. See [Evidence](#evidence).
