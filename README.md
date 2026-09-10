@@ -27,10 +27,20 @@ them — the tests that need the specification skip and say so, and
 `mocks/meridian/index.html` is a complete designer written for this project that
 ships and can be built against immediately.
 
+```bash
+npm run mock                      # the Meridian designer on :5174
+```
+
 Chrome → `chrome://extensions` → Developer mode → **Load unpacked** → `dist/`.
-Open the mock in a tab, click the extension icon, choose `abc-101-study.ir.json`,
-**Build into this tab**. The agent is injected at run time, so a tab opened
-before installing does not need reloading.
+Open a designer in a tab — `npm run mock` above, or the assignment's own on
+:5173 — click the extension icon, choose `abc-101-study.ir.json`, **Build into
+this tab**. The agent is injected at run time, so a tab opened before installing
+does not need reloading.
+
+The mock is served over http rather than opened off the disk on purpose: a
+`file://` page makes Chrome demand "Allow access to file URLs" before an
+extension may touch it, which is a step about where the file is stored rather
+than about anything being evaluated.
 
 No API key, no network calls. The agent is deterministic code, not a model in a
 loop — every decision has to be explainable to a reviewer, and "the model
